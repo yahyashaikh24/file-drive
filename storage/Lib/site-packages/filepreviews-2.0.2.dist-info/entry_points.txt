@@ -1,0 +1,3 @@
+[console_scripts]
+filepreviews = filepreviews.__main__:cli
+

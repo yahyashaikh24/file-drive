@@ -1,0 +1,22 @@
+static/admin/js/vendor/select2/i18n/eu.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/fa.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/fi.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/fr.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/gl.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/he.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/hi.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/hr.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/hsb.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/hu.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/hy.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/id.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/is.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/it.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/ja.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/ka.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/km.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/ko.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/lt.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/lv.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/mk.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i

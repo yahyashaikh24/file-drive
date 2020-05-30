@@ -1,0 +1,37 @@
+ -> 356 bytes
+ .../redirects/locale/en/LC_MESSAGES/django.po |    50 +
+ .../locale/en_AU/LC_MESSAGES/django.mo        |   Bin 0 -> 486 bytes
+ .../locale/en_AU/LC_MESSAGES/django.po        |    42 +
+ .../locale/en_GB/LC_MESSAGES/django.mo        |   Bin 0 -> 1053 bytes
+ .../locale/en_GB/LC_MESSAGES/django.po        |    50 +
+ .../redirects/locale/eo/LC_MESSAGES/django.mo |   Bin 0 -> 1138 bytes
+ .../redirects/locale/eo/LC_MESSAGES/django.po |    52 +
+ .../redirects/locale/es/LC_MESSAGES/django.mo |   Bin 0 -> 1143 bytes
+ .../redirects/locale/es/LC_MESSAGES/django.po |    52 +
+ .../locale/es_AR/LC_MESSAGES/django.mo        |   Bin 0 -> 1101 bytes
+ .../locale/es_AR/LC_MESSAGES/django.po        |    51 +
+ .../locale/es_CO/LC_MESSAGES/django.mo        |   Bin 0 -> 1147 bytes
+ .../locale/es_CO/LC_MESSAGES/django.po        |    50 +
+ .../locale/es_MX/LC_MESSAGES/django.mo        |   Bin 0 -> 1116 bytes
+ .../locale/es_MX/LC_MESSAGES/django.po        |    53 +
+ .../locale/es_VE/LC_MESSAGES/django.mo        |   Bin 0 -> 486 bytes
+ .../locale/es_VE/LC_MESSAGES/django.po        |    42 +
+ .../redirects/locale/et/LC_MESSAGES/django.mo |   Bin 0 -> 1097 bytes
+ .../redirects/locale/et/LC_MESSAGES/django.po |    53 +
+ .../redirects/locale/eu/LC_MESSAGES/django.mo |   Bin 0 -> 1119 bytes
+ .../redirects/locale/eu/LC_MESSAGES/django.po |    50 +
+ .../redirects/locale/fa/LC_MESSAGES/django.mo |   Bin 0 -> 1241 bytes
+ .../redirects/locale/fa/LC_MESSAGES/django.po |    49 +
+ .../redirects/locale/fi/LC_MESSAGES/django.mo |   Bin 0 -> 1158 bytes
+ .../redirects/locale/fi/LC_MESSAGES/django.po |    52 +
+ .../redirects/locale/fr/LC_MESSAGES/django.mo |   Bin 0 -> 1115 bytes
+ .../redirects/locale/fr/LC_MESSAGES/django.po |    50 +
+ .../redirects/locale/fy/LC_MESSAGES/django.mo |   Bin 0 -> 476 bytes
+ .../redirects/locale/fy/LC_MESSAGES/django.po |    42 +
+ .../redirects/locale/ga/LC_MESSAGES/django.mo |   Bin 0 -> 1075 bytes
+ .../redirects/locale/ga/LC_MESSAGES/django.po |    48 +
+ .../redirects/locale/gd/LC_MESSAGES/django.mo |   Bin 0 -> 1219 bytes
+ .../redirects/locale/gd/LC_MESSAGES/django.po |    52 +
+ .../redirects/locale/gl/LC_MESSAGES/django.mo |   Bin 0 -> 1127 bytes
+ .../redirects/locale/gl/LC_MESSAGES/django.po |    51 +
+ .../redirects/locale/he/LC_MESSAGES/django.mo |   Bin

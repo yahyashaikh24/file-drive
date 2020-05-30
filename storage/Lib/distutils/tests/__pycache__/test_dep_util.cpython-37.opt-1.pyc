@@ -1,0 +1,37 @@
+ostgres/locale/fa/LC_MESSAGES/django.mo  |   Bin 0 -> 3614 bytes
+ .../postgres/locale/fa/LC_MESSAGES/django.po  |   117 +
+ .../postgres/locale/fi/LC_MESSAGES/django.mo  |   Bin 0 -> 3212 bytes
+ .../postgres/locale/fi/LC_MESSAGES/django.po  |   120 +
+ .../postgres/locale/fr/LC_MESSAGES/django.mo  |   Bin 0 -> 3366 bytes
+ .../postgres/locale/fr/LC_MESSAGES/django.po  |   119 +
+ .../postgres/locale/gd/LC_MESSAGES/django.mo  |   Bin 0 -> 3795 bytes
+ .../postgres/locale/gd/LC_MESSAGES/django.po  |   135 +
+ .../postgres/locale/gl/LC_MESSAGES/django.mo  |   Bin 0 -> 722 bytes
+ .../postgres/locale/gl/LC_MESSAGES/django.po  |   108 +
+ .../postgres/locale/he/LC_MESSAGES/django.mo  |   Bin 0 -> 3989 bytes
+ .../postgres/locale/he/LC_MESSAGES/django.po  |   121 +
+ .../postgres/locale/hr/LC_MESSAGES/django.mo  |   Bin 0 -> 1217 bytes
+ .../postgres/locale/hr/LC_MESSAGES/django.po  |   112 +
+ .../postgres/locale/hsb/LC_MESSAGES/django.mo |   Bin 0 -> 3734 bytes
+ .../postgres/locale/hsb/LC_MESSAGES/django.po |   129 +
+ .../postgres/locale/hu/LC_MESSAGES/django.mo  |   Bin 0 -> 3163 bytes
+ .../postgres/locale/hu/LC_MESSAGES/django.po  |   119 +
+ .../postgres/locale/hy/LC_MESSAGES/django.mo  |   Bin 0 -> 3593 bytes
+ .../postgres/locale/hy/LC_MESSAGES/django.po  |   119 +
+ .../postgres/locale/ia/LC_MESSAGES/django.mo  |   Bin 0 -> 758 bytes
+ .../postgres/locale/ia/LC_MESSAGES/django.po  |   108 +
+ .../postgres/locale/id/LC_MESSAGES/django.mo  |   Bin 0 -> 2980 bytes
+ .../postgres/locale/id/LC_MESSAGES/django.po  |   119 +
+ .../postgres/locale/is/LC_MESSAGES/django.mo  |   Bin 0 -> 3183 bytes
+ .../postgres/locale/is/LC_MESSAGES/django.po  |   118 +
+ .../postgres/locale/it/LC_MESSAGES/django.mo  |   Bin 0 -> 3243 bytes
+ .../postgres/locale/it/LC_MESSAGES/django.po  |   126 +
+ .../postgres/locale/ja/LC_MESSAGES/django.mo  |   Bin 0 -> 3349 bytes
+ .../postgres/locale/ja/LC_MESSAGES/django.po  |   110 +
+ .../postgres/locale/ka/LC_MESSAGES/django.mo  |   Bin 0 -> 731 bytes
+ .../postgres/locale/ka/LC_MESSAGES/django.po  |   108 +
+ .../postgres/locale/kk/LC_MESSAGES/django.mo  |   Bin 0 -> 683 bytes
+ .../postgres/locale/kk/LC_MESSAGES/django.po  |   107 +
+ .../postgres/locale/ko/LC_MESSAGES/django.mo  |   Bin 0 -> 3175 bytes
+ .../postgres/locale/ko/LC_MESSAGES/django.po  |   115 +
+ ...

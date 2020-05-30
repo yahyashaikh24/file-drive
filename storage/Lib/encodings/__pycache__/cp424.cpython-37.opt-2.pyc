@@ -1,0 +1,25 @@
+SAGES/djangojs.po
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/es_CO/LC_MESSAGES/django.mo
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/es_CO/LC_MESSAGES/django.po
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/es_CO/LC_MESSAGES/djangojs.mo
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/es_CO/LC_MESSAGES/djangojs.po
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/es_MX/LC_MESSAGES/django.mo
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/es_MX/LC_MESSAGES/django.po
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/es_MX/LC_MESSAGES/djangojs.mo
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/es_MX/LC_MESSAGES/djangojs.po
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/es_VE/LC_MESSAGES/django.mo
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/es_VE/LC_MESSAGES/django.po
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/es_VE/LC_MESSAGES/djangojs.mo
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/es_VE/LC_MESSAGES/djangojs.po
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/et/LC_MESSAGES/django.mo
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/et/LC_MESSAGES/django.po
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/et/LC_MESSAGES/djangojs.mo
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/et/LC_MESSAGES/djangojs.po
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/eu/LC_MESSAGES/django.mo
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/eu/LC_MESSAGES/django.po
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/eu/LC_MESSAGES/djangojs.mo
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/eu/LC_MESSAGES/djangojs.po
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/fa/LC_MESSAGES/django.mo
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/fa/LC_MESSAGES/django.po
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/locale/fa/LC_MESSAGES/djangojs.mo
+ create 

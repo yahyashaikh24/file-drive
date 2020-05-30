@@ -1,0 +1,25 @@
+0644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/SelectFilter2.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/actions.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/actions.min.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/admin/RelatedObjectLookups.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/autocomplete.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/calendar.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/cancel.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/change_form.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/collapse.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/collapse.min.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/core.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/inlines.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/inlines.min.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/jquery.init.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/popup_response.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/prepopulate.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/prepopulate.min.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/prepopulate_init.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/urlify.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/jquery/LICENSE.txt
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/jquery/jquery.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/jquery/jquery.min.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/LICENSE.md
+ create mode 100644 storage/Lib/site-packages/django/contrib/

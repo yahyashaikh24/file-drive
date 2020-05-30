@@ -1,0 +1,473 @@
+ |     1 +
+ .../jdk.incubator.jpackage/ASSEMBLY_EXCEPTION |     1 +
+ .../jdk/legal/jdk.incubator.jpackage/LICENSE  |     1 +
+ .../jdk.internal.ed/ADDITIONAL_LICENSE_INFO   |     1 +
+ .../legal/jdk.internal.ed/ASSEMBLY_EXCEPTION  |     1 +
+ .../jdk/legal/jdk.internal.ed/LICENSE         |     1 +
+ .../ADDITIONAL_LICENSE_INFO                   |     1 +
+ .../jdk.internal.jvmstat/ASSEMBLY_EXCEPTION   |     1 +
+ .../jdk/legal/jdk.internal.jvmstat/LICENSE    |     1 +
+ .../jdk.internal.le/ADDITIONAL_LICENSE_INFO   |     1 +
+ .../legal/jdk.internal.le/ASSEMBLY_EXCEPTION  |     1 +
+ .../jdk/legal/jdk.internal.le/LICENSE         |     1 +
+ .../jdk/legal/jdk.internal.le/jline.md        |    41 +
+ .../jdk.internal.opt/ADDITIONAL_LICENSE_INFO  |     1 +
+ .../legal/jdk.internal.opt/ASSEMBLY_EXCEPTION |     1 +
+ .../jdk/legal/jdk.internal.opt/LICENSE        |     1 +
+ .../jdk/legal/jdk.internal.opt/jopt-simple.md |    27 +
+ .../ADDITIONAL_LICENSE_INFO                   |     1 +
+ .../jdk.internal.vm.ci/ASSEMBLY_EXCEPTION     |     1 +
+ .../jdk/legal/jdk.internal.vm.ci/LICENSE      |     1 +
+ .../ADDITIONAL_LICENSE_INFO                   |     1 +
+ .../ASSEMBLY_EXCEPTION                        |     1 +
+ .../LICENSE                                   |     1 +
+ .../ADDITIONAL_LICENSE_INFO                   |     1 +
+ .../ASSEMBLY_EXCEPTION                        |     1 +
+ .../legal/jdk.internal.vm.compiler/LICENSE    |     1 +
+ .../legal/jdk.jartool/ADDITIONAL_LICENSE_INFO |     1 +
+ .../jdk/legal/jdk.jartool/ASSEMBLY_EXCEPTION  |     1 +
+ .../jdk/legal/jdk.jartool/LICENSE             |     1 +
+ .../legal/jdk.javadoc/ADDITIONAL_LICENSE_INFO |     1 +
+ .../jdk/legal/jdk.javadoc/ASSEMBLY_EXCEPTION  |     1 +
+ .../jdk/legal/jdk.javadoc/LICENSE             |     1 +
+ .../jdk/legal/jdk.javadoc/jquery.md           |    72 +
+ .../jdk/legal/jdk.javadoc/jqueryUI.md         |    49 +
+ .../jdk/legal/jdk.javadoc/jszip.md            |    58 +
+ .../legal/jdk.jcmd/ADDITIONAL_LICENSE_INFO    |     1 +
+ .../jdk/legal/jdk.jcmd/ASSEMBLY_EXCEPTION     |     1 +
+ .../jdk/legal/jdk.jcmd/LICENSE                |     1 +
+ .../jdk.jconsole/ADDITIONAL_LICENSE_INFO      |     1 +
+ .../jdk/legal/jdk.jconsole/ASSEMBLY_EXCEPTION |     1 +
+ .../jdk/legal/jdk.jconsole/LICENSE            |     1 +
+ .../legal/jdk.jdeps/ADDITIONAL_LICENSE_INFO   |     1 +
+ .../jdk/legal/jdk.jdeps/ASSEMBLY_EXCEPTION    |     1 +
+ .../jdk/legal/jdk.jdeps/LICENSE               |     1 +
+ .../jdk/legal/jdk.jdi/ADDITIONAL_LICENSE_INFO |     1 +
+ .../jdk/legal/jdk.jdi/ASSEMBLY_EXCEPTION      |     1 +
+ .../jdk/legal/jdk.jdi/LICENSE                 |     1 +
+ .../jdk.jdwp.agent/ADDITIONAL_LICENSE_INFO    |     1 +
+ .../legal/jdk.jdwp.agent/ASSEMBLY_EXCEPTION   |     1 +
+ .../jdk/legal/jdk.jdwp.agent/LICENSE          |     1 +
+ .../jdk/legal/jdk.jfr/ADDITIONAL_LICENSE_INFO |     1 +
+ .../jdk/legal/jdk.jfr/ASSEMBLY_EXCEPTION      |     1 +
+ .../jdk/legal/jdk.jfr/LICENSE                 |     1 +
+ .../legal/jdk.jlink/ADDITIONAL_LICENSE_INFO   |     1 +
+ .../jdk/legal/jdk.jlink/ASSEMBLY_EXCEPTION    |     1 +
+ .../jdk/legal/jdk.jlink/LICENSE               |     1 +
+ .../legal/jdk.jshell/ADDITIONAL_LICENSE_INFO  |     1 +
+ .../jdk/legal/jdk.jshell/ASSEMBLY_EXCEPTION   |     1 +
+ .../jdk/legal/jdk.jshell/LICENSE              |     1 +
+ .../jdk.jsobject/ADDITIONAL_LICENSE_INFO      |     1 +
+ .../jdk/legal/jdk.jsobject/ASSEMBLY_EXCEPTION |     1 +
+ .../jdk/legal/jdk.jsobject/LICENSE            |     1 +
+ .../legal/jdk.jstatd/ADDITIONAL_LICENSE_INFO  |     1 +
+ .../jdk/legal/jdk.jstatd/ASSEMBLY_EXCEPTION   |     1 +
+ .../jdk/legal/jdk.jstatd/LICENSE              |     1 +
+ .../jdk.localedata/ADDITIONAL_LICENSE_INFO    |     1 +
+ .../legal/jdk.localedata/ASSEMBLY_EXCEPTION   |     1 +
+ .../jdk/legal/jdk.localedata/LICENSE          |     1 +
+ .../jdk/legal/jdk.localedata/cldr.md          |     1 +
+ .../jdk/legal/jdk.localedata/thaidict.md      |    31 +
+ .../ADDITIONAL_LICENSE_INFO                   |     1 +
+ .../jdk.management.agent/ASSEMBLY_EXCEPTION   |     1 +
+ .../jdk/legal/jdk.management.agent/LICENSE    |     1 +
+ .../ADDITIONAL_LICENSE_INFO                   |     1 +
+ .../jdk.management.jfr/ASSEMBLY_EXCEPTION     |     1 +
+ .../jdk/legal/jdk.management.jfr/LICENSE      |     1 +
+ .../jdk.management/ADDITIONAL_LICENSE_INFO    |     1 +
+ .../legal/jdk.management/ASSEMBLY_EXCEPTION   |     1 +
+ .../jdk/legal/jdk.management/LICENSE          |     1 +
+ .../jdk.naming.dns/ADDITIONAL_LICENSE_INFO    |     1 +
+ .../legal/jdk.naming.dns/ASSEMBLY_EXCEPTION   |     1 +
+ .../jdk/legal/jdk.naming.dns/LICENSE          |     1 +
+ .../jdk.naming.rmi/ADDITIONAL_LICENSE_INFO    |     1 +
+ .../legal/jdk.naming.rmi/ASSEMBLY_EXCEPTION   |     1 +
+ .../jdk/legal/jdk.naming.rmi/LICENSE          |     1 +
+ .../jdk/legal/jdk.net/ADDITIONAL_LICENSE_INFO |     1 +
+ .../jdk/legal/jdk.net/ASSEMBLY_EXCEPTION      |     1 +
+ .../jdk/legal/jdk.net/LICENSE                 |     1 +
+ .../jdk.nio.mapmode/ADDITIONAL_LICENSE_INFO   |     1 +
+ .../legal/jdk.nio.mapmode/ASSEMBLY_EXCEPTION  |     1 +
+ .../jdk/legal/jdk.nio.mapmode/LICENSE         |     1 +
+ .../legal/jdk.rmic/ADDITIONAL_LICENSE_INFO    |     1 +
+ .../jdk/legal/jdk.rmic/ASSEMBLY_EXCEPTION     |     1 +
+ .../jdk/legal/jdk.rmic/LICENSE                |     1 +
+ .../ADDITIONAL_LICENSE_INFO                   |     1 +
+ .../ASSEMBLY_EXCEPTION                        |     1 +
+ .../legal/jdk.scripting.nashorn.shell/LICENSE |     1 +
+ .../ADDITIONAL_LICENSE_INFO                   |     1 +
+ .../jdk.scripting.nashorn/ASSEMBLY_EXCEPTION  |     1 +
+ .../jdk/legal/jdk.scripting.nashorn/LICENSE   |     1 +
+ .../double-conversion.md                      |    36 +
+ .../jdk/legal/jdk.scripting.nashorn/joni.md   |    26 +
+ .../legal/jdk.sctp/ADDITIONAL_LICENSE_INFO    |     1 +
+ .../jdk/legal/jdk.sctp/ASSEMBLY_EXCEPTION     |     1 +
+ .../jdk/legal/jdk.sctp/LICENSE                |     1 +
+ .../jdk.security.auth/ADDITIONAL_LICENSE_INFO |     1 +
+ .../jdk.security.auth/ASSEMBLY_EXCEPTION      |     1 +
+ .../jdk/legal/jdk.security.auth/LICENSE       |     1 +
+ .../jdk.security.jgss/ADDITIONAL_LICENSE_INFO |     1 +
+ .../jdk.security.jgss/ASSEMBLY_EXCEPTION      |     1 +
+ .../jdk/legal/jdk.security.jgss/LICENSE       |     1 +
+ .../ADDITIONAL_LICENSE_INFO                   |     1 +
+ .../ASSEMBLY_EXCEPTION                        |     1 +
+ .../jdk/legal/jdk.unsupported.desktop/LICENSE |     1 +
+ .../jdk.unsupported/ADDITIONAL_LICENSE_INFO   |     1 +
+ .../legal/jdk.unsupported/ASSEMBLY_EXCEPTION  |     1 +
+ .../jdk/legal/jdk.unsupported/LICENSE         |     1 +
+ .../legal/jdk.xml.dom/ADDITIONAL_LICENSE_INFO |     1 +
+ .../jdk/legal/jdk.xml.dom/ASSEMBLY_EXCEPTION  |     1 +
+ .../jdk/legal/jdk.xml.dom/LICENSE             |     1 +
+ .../legal/jdk.zipfs/ADDITIONAL_LICENSE_INFO   |     1 +
+ .../jdk/legal/jdk.zipfs/ASSEMBLY_EXCEPTION    |     1 +
+ .../jdk/legal/jdk.zipfs/LICENSE               |     1 +
+ .../elasticsearch-7.7.0/jdk/lib/classlist     |  1196 +
+ .../elasticsearch-7.7.0/jdk/lib/ct.sym        |   Bin 0 -> 7108763 bytes
+ .../jdk/lib/fontconfig.bfc                    |   Bin 0 -> 4630 bytes
+ .../jdk/lib/fontconfig.properties.src         |   328 +
+ .../elasticsearch-7.7.0/jdk/lib/jawt.lib      |   Bin 0 -> 1682 bytes
+ .../jdk/lib/jfr/default.jfc                   |   924 +
+ .../jdk/lib/jfr/profile.jfc                   |   924 +
+ .../elasticsearch-7.7.0/jdk/lib/jrt-fs.jar    |   Bin 0 -> 107492 bytes
+ .../elasticsearch-7.7.0/jdk/lib/jvm.cfg       |     2 +
+ .../elasticsearch-7.7.0/jdk/lib/jvm.lib       |   Bin 0 -> 996314 bytes
+ .../elasticsearch-7.7.0/jdk/lib/modules       |   Bin 0 -> 144251438 bytes
+ .../jdk/lib/psfont.properties.ja              |   119 +
+ .../jdk/lib/psfontj2d.properties              |   323 +
+ .../jdk/lib/security/blacklisted.certs        |    20 +
+ .../jdk/lib/security/cacerts                  |   Bin 0 -> 103147 bytes
+ .../jdk/lib/security/default.policy           |   231 +
+ .../jdk/lib/security/public_suffix_list.dat   |   Bin 0 -> 235806 bytes
+ .../elasticsearch-7.7.0/jdk/lib/tzdb.dat      |   Bin 0 -> 107567 bytes
+ .../elasticsearch-7.7.0/jdk/lib/tzmappings    |   504 +
+ .../elasticsearch-7.7.0/jdk/release           |     8 +
+ .../lib/HdrHistogram-2.1.9.jar                |   Bin 0 -> 114165 bytes
+ .../lib/elasticsearch-7.7.0.jar               |   Bin 0 -> 12094147 bytes
+ .../lib/elasticsearch-cli-7.7.0.jar           |   Bin 0 -> 18025 bytes
+ .../lib/elasticsearch-core-7.7.0.jar          |   Bin 0 -> 44774 bytes
+ .../lib/elasticsearch-geo-7.7.0.jar           |   Bin 0 -> 45013 bytes
+ .../lib/elasticsearch-launchers-7.7.0.jar     |   Bin 0 -> 20713 bytes
+ ...elasticsearch-plugin-classloader-7.7.0.jar |   Bin 0 -> 6519 bytes
+ .../lib/elasticsearch-secure-sm-7.7.0.jar     |   Bin 0 -> 10943 bytes
+ .../lib/elasticsearch-x-content-7.7.0.jar     |   Bin 0 -> 137216 bytes
+ .../elasticsearch-7.7.0/lib/hppc-0.8.1.jar    |   Bin 0 -> 1159086 bytes
+ .../lib/jackson-core-2.10.4.jar               |   Bin 0 -> 349273 bytes
+ .../lib/jackson-dataformat-cbor-2.10.4.jar    |   Bin 0 -> 58567 bytes
+ .../lib/jackson-dataformat-smile-2.10.4.jar   |   Bin 0 -> 90817 bytes
+ .../lib/jackson-dataformat-yaml-2.10.4.jar    |   Bin 0 -> 46788 bytes
+ .../lib/java-version-checker-7.7.0.jar        |   Bin 0 -> 8787 bytes
+ .../elasticsearch-7.7.0/lib/jna-4.5.1.jar     |   Bin 0 -> 885297 bytes
+ .../lib/joda-time-2.10.4.jar                  |   Bin 0 -> 643037 bytes
+ .../lib/jopt-simple-5.0.2.jar                 |   Bin 0 -> 78074 bytes
+ .../lib/jts-core-1.15.0.jar                   |   Bin 0 -> 797736 bytes
+ .../lib/log4j-api-2.11.1.jar                  |   Bin 0 -> 264060 bytes
+ .../lib/log4j-core-2.11.1.jar                 |   Bin 0 -> 1607947 bytes
+ .../lib/lucene-analyzers-common-8.5.1.jar     |   Bin 0 -> 1685399 bytes
+ .../lib/lucene-backward-codecs-8.5.1.jar      |   Bin 0 -> 139689 bytes
+ .../lib/lucene-core-8.5.1.jar                 |   Bin 0 -> 3472177 bytes
+ .../lib/lucene-grouping-8.5.1.jar             |   Bin 0 -> 91051 bytes
+ .../lib/lucene-highlighter-8.5.1.jar          |   Bin 0 -> 209841 bytes
+ .../lib/lucene-join-8.5.1.jar                 |   Bin 0 -> 149149 bytes
+ .../lib/lucene-memory-8.5.1.jar               |   Bin 0 -> 52136 bytes
+ .../lib/lucene-misc-8.5.1.jar                 |   Bin 0 -> 99324 bytes
+ .../lib/lucene-queries-8.5.1.jar              |   Bin 0 -> 380226 bytes
+ .../lib/lucene-queryparser-8.5.1.jar          |   Bin 0 -> 382446 bytes
+ .../lib/lucene-sandbox-8.5.1.jar              |   Bin 0 -> 223499 bytes
+ .../lib/lucene-spatial-extras-8.5.1.jar       |   Bin 0 -> 240650 bytes
+ .../lib/lucene-spatial3d-8.5.1.jar            |   Bin 0 -> 309348 bytes
+ .../lib/lucene-suggest-8.5.1.jar              |   Bin 0 -> 249792 bytes
+ .../lib/snakeyaml-1.26.jar                    |   Bin 0 -> 309001 bytes
+ .../elasticsearch-7.7.0/lib/spatial4j-0.7.jar |   Bin 0 -> 204833 bytes
+ .../elasticsearch-7.7.0/lib/t-digest-3.2.jar  |   Bin 0 -> 51208 bytes
+ .../lib/tools/plugin-cli/bc-fips-1.0.1.jar    |   Bin 0 -> 3362942 bytes
+ .../lib/tools/plugin-cli/bcpg-fips-1.0.3.jar  |   Bin 0 -> 332048 bytes
+ .../elasticsearch-plugin-cli-7.7.0.jar        |   Bin 0 -> 34863 bytes
+ .../security-cli/bcpkix-jdk15on-1.64.jar      |   Bin 0 -> 878038 bytes
+ .../security-cli/bcprov-jdk15on-1.64.jar      |   Bin 0 -> 4771726 bytes
+ .../elasticsearch-security-cli-7.7.0.jar      |   Bin 0 -> 103542 bytes
+ ...icsearch-service-x64-stderr.2020-05-27.log |     2 +
+ ...icsearch-service-x64-stdout.2020-05-27.log |     2 +
+ .../elasticsearch-service-x64.2020-05-27.log  |    13 +
+ .../logs/elasticsearch-service-x64.pid        |     1 +
+ .../logs/elasticsearch.log                    |   100 +
+ .../logs/elasticsearch_audit.json             |     0
+ .../logs/elasticsearch_deprecation.json       |     0
+ .../logs/elasticsearch_deprecation.log        |     0
+ .../elasticsearch_index_indexing_slowlog.json |     0
+ .../elasticsearch_index_indexing_slowlog.log  |     0
+ .../elasticsearch_index_search_slowlog.json   |     0
+ .../elasticsearch_index_search_slowlog.log    |     0
+ .../logs/elasticsearch_server.json            |   100 +
+ .../elasticsearch-7.7.0/logs/gc.log           |     9 +
+ .../elasticsearch-7.7.0/logs/gc.log.00        |     9 +
+ .../elasticsearch-7.7.0/logs/gc.log.01        |   159 +
+ .../elasticsearch-7.7.0/logs/gc.log.02        |     9 +
+ .../elasticsearch-7.7.0/logs/gc.log.03        |    10 +
+ .../elasticsearch-7.7.0/logs/gc.log.04        |     9 +
+ .../elasticsearch-7.7.0/logs/gc.log.05        |   151 +
+ .../aggs-matrix-stats-client-7.7.0.jar        |   Bin 0 -> 60595 bytes
+ .../plugin-descriptor.properties              |    45 +
+ .../analysis-common/analysis-common-7.7.0.jar |   Bin 0 -> 198660 bytes
+ .../plugin-descriptor.properties              |    45 +
+ .../modules/constant-keyword/LICENSE.txt      |   223 +
+ .../modules/constant-keyword/NOTICE.txt       |     4 +
+ .../constant-keyword-7.7.0.jar                |   Bin 0 -> 17034 bytes
+ .../plugin-descriptor.properties              |    45 +
+ .../modules/flattened/LICENSE.txt             |   223 +
+ .../modules/flattened/NOTICE.txt              |     4 +
+ .../modules/flattened/flattened-7.7.0.jar     |   Bin 0 -> 34874 bytes
+ .../flattened/plugin-descriptor.properties    |    45 +
+ .../modules/frozen-indices/LICENSE.txt        |   223 +
+ .../modules/frozen-indices/NOTICE.txt         |     4 +
+ .../frozen-indices/frozen-indices-7.7.0.jar   |   Bin 0 -> 42376 bytes
+ .../plugin-descriptor.properties              |    45 +
+ .../elasticsearch-dissect-7.7.0.jar           |   Bin 0 -> 24682 bytes
+ .../elasticsearch-grok-7.7.0.jar              |   Bin 0 -> 33951 bytes
+ .../ingest-common/ingest-common-7.7.0.jar     |   Bin 0 -> 115859 bytes
+ .../modules/ingest-common/jcodings-1.0.44.jar |   Bin 0 -> 1682608 bytes
+ .../modules/ingest-common/joni-2.1.29.jar     |   Bin 0 -> 214815 bytes
+ .../plugin-descriptor.properties              |    45 +
+ .../modules/ingest-geoip/GeoLite2-ASN.mmdb    |   Bin 0 -> 6603852 bytes
+ .../modules/ingest-geoip/GeoLite2-City.mmdb   |   Bin 0 -> 62898296 bytes
+ .../ingest-geoip/GeoLite2-Country.mmdb        |   Bin 0 -> 3988184 bytes
+ .../modules/ingest-geoip/geoip2-2.13.1.jar    |   Bin 0 -> 49735 bytes
+ .../ingest-geoip/ingest-geoip-7.7.0.jar       |   Bin 0 -> 27350 bytes
+ .../jackson-annotations-2.10.4.jar            |   Bin 0 -> 68083 bytes
+ .../ingest-geoip/jackson-databind-2.10.4.jar  |   Bin 0 -> 1404874 bytes
+ .../modules/ingest-geoip/maxmind-db-1.3.1.jar |   Bin 0 -> 23384 bytes
+ .../ingest-geoip/plugin-descriptor.properties |    45 +
+ .../ingest-geoip/plugin-security.policy       |    29 +
+ .../ingest-user-agent-7.7.0.jar               |   Bin 0 -> 64174 bytes
+ .../plugin-descriptor.properties              |    45 +
+ .../antlr4-runtime-4.5.1-1.jar                |   Bin 0 -> 302034 bytes
+ .../modules/lang-expression/asm-5.0.4.jar     |   Bin 0 -> 53297 bytes
+ .../lang-expression/asm-commons-5.0.4.jar     |   Bin 0 -> 41796 bytes
+ .../lang-expression/asm-tree-5.0.4.jar        |   Bin 0 -> 29050 bytes
+ .../lang-expression/lang-expression-7.7.0.jar |   Bin 0 -> 65739 bytes
+ .../lucene-expressions-8.5.1.jar              |   Bin 0 -> 73343 bytes
+ .../plugin-descriptor.properties              |    45 +
+ .../lang-expression/plugin-security.policy    |    32 +
+ .../modules/lang-mustache/compiler-0.9.6.jar  |   Bin 0 -> 100892 bytes
+ .../lang-mustache-client-7.7.0.jar            |   Bin 0 -> 63382 bytes
+ .../plugin-descriptor.properties              |    45 +
+ .../lang-mustache/plugin-security.policy      |    23 +
+ .../lang-painless/antlr4-runtime-4.5.3.jar    |   Bin 0 -> 302248 bytes
+ .../modules/lang-painless/asm-7.2.jar         |   Bin 0 -> 114873 bytes
+ .../lang-painless/asm-analysis-7.2.jar        |   Bin 0 -> 33444 bytes
+ .../modules/lang-painless/asm-commons-7.2.jar |   Bin 0 -> 70051 bytes
+ .../modules/lang-painless/asm-tree-7.2.jar    |   Bin 0 -> 50283 bytes
+ .../modules/lang-painless/asm-util-7.2.jar    |   Bin 0 -> 80707 bytes
+ ...ticsearch-scripting-painless-spi-7.7.0.jar |   Bin 0 -> 27844 bytes
+ .../lang-painless/lang-painless-7.7.0.jar     |   Bin 0 -> 561382 bytes
+ .../plugin-descriptor.properties              |    45 +
+ .../lang-painless/plugin-security.policy      |    26 +
+ .../mapper-extras-client-7.7.0.jar            |   Bin 0 -> 89164 bytes
+ .../plugin-descriptor.properties              |    45 +
+ .../parent-join/parent-join-client-7.7.0.jar  |   Bin 0 -> 83496 bytes
+ .../parent-join/plugin-descriptor.properties  |    45 +
+ .../percolator/percolator-client-7.7.0.jar    |   Bin 0 -> 74531 bytes
+ .../percolator/plugin-descriptor.properties   |    45 +
+ .../rank-eval/plugin-descriptor.properties    |    45 +
+ .../rank-eval/rank-eval-client-7.7.0.jar      |   Bin 0 -> 83120 bytes
+ .../modules/reindex/commons-codec-1.11.jar    |   Bin 0 -> 335042 bytes
+ .../modules/reindex/commons-logging-1.1.3.jar |   Bin 0 -> 62050 bytes
+ .../elasticsearch-rest-client-7.7.0.jar       |   Bin 0 -> 63583 bytes
+ .../elasticsearch-ssl-config-7.7.0.jar        |   Bin 0 -> 67290 bytes
+ .../modules/reindex/httpasyncclient-4.1.4.jar |   Bin 0 -> 179964 bytes
+ .../modules/reindex/httpclient-4.5.10.jar     |   Bin 0 -> 774640 bytes
+ .../modules/reindex/httpcore-4.4.12.jar       |   Bin 0 -> 328347 bytes
+ .../modules/reindex/httpcore-nio-4.4.12.jar   |   Bin 0 -> 367672 bytes
+ .../reindex/plugin-descriptor.properties      |    45 +
+ .../modules/reindex/plugin-security.policy    |    33 +
+ .../modules/reindex/reindex-client-7.7.0.jar  |   Bin 0 -> 117091 bytes
+ .../plugin-descriptor.properties              |    45 +
+ .../repository-url/plugin-security.policy     |    22 +
+ .../repository-url/repository-url-7.7.0.jar   |   Bin 0 -> 14716 bytes
+ .../modules/search-business-rules/LICENSE.txt |   223 +
+ .../modules/search-business-rules/NOTICE.txt  |     4 +
+ .../plugin-descriptor.properties              |    45 +
+ .../search-business-rules-7.7.0.jar           |   Bin 0 -> 21980 bytes
+ .../modules/spatial/LICENSE.txt               |   223 +
+ .../modules/spatial/NOTICE.txt                |     4 +
+ .../spatial/plugin-descriptor.properties      |    45 +
+ .../modules/spatial/spatial-7.7.0.jar         |   Bin 0 -> 39047 bytes
+ .../tasks/plugin-descriptor.properties        |    45 +
+ .../modules/tasks/tasks-7.7.0.jar             |   Bin 0 -> 5915 bytes
+ .../modules/transform/LICENSE.txt             |   223 +
+ .../modules/transform/NOTICE.txt              |     4 +
+ .../transform/plugin-descriptor.properties    |    45 +
+ .../modules/transform/transform-7.7.0.jar     |   Bin 0 -> 274277 bytes
+ .../netty-buffer-4.1.45.Final.jar             |   Bin 0 -> 278395 bytes
+ .../netty-codec-4.1.45.Final.jar              |   Bin 0 -> 318353 bytes
+ .../netty-codec-http-4.1.45.Final.jar         |   Bin 0 -> 608266 bytes
+ .../netty-common-4.1.45.Final.jar             |   Bin 0 -> 611552 bytes
+ .../netty-handler-4.1.45.Final.jar            |   Bin 0 -> 449349 bytes
+ .../netty-resolver-4.1.45.Final.jar           |   Bin 0 -> 32798 bytes
+ .../netty-transport-4.1.45.Final.jar          |   Bin 0 -> 472685 bytes
+ .../plugin-descriptor.properties              |    45 +
+ .../transport-netty4/plugin-security.policy   |    35 +
+ .../transport-netty4-client-7.7.0.jar         |   Bin 0 -> 74133 bytes
+ .../modules/vectors/LICENSE.txt               |   223 +
+ .../modules/vectors/NOTICE.txt                |     4 +
+ .../vectors/plugin-descriptor.properties      |    45 +
+ .../modules/vectors/vectors-7.7.0.jar         |   Bin 0 -> 55500 bytes
+ .../modules/x-pack-analytics/LICENSE.txt      |   223 +
+ .../modules/x-pack-analytics/NOTICE.txt       |     4 +
+ .../plugin-descriptor.properties              |    45 +
+ .../x-pack-analytics/plugin-security.policy   |     0
+ .../x-pack-analytics-7.7.0.jar                |   Bin 0 -> 115340 bytes
+ .../modules/x-pack-async-search/LICENSE.txt   |   223 +
+ .../modules/x-pack-async-search/NOTICE.txt    |     4 +
+ .../plugin-descriptor.properties              |    45 +
+ .../plugin-security.policy                    |     0
+ .../x-pack-async-search-7.7.0.jar             |   Bin 0 -> 60811 bytes
+ .../modules/x-pack-autoscaling/LICENSE.txt    |   223 +
+ .../modules/x-pack-autoscaling/NOTICE.txt     |     4 +
+ .../plugin-descriptor.properties              |    45 +
+ .../x-pack-autoscaling-7.7.0.jar              |   Bin 0 -> 21265 bytes
+ .../modules/x-pack-ccr/LICENSE.txt            |   223 +
+ .../modules/x-pack-ccr/NOTICE.txt             |     4 +
+ .../x-pack-ccr/plugin-descriptor.properties   |    45 +
+ .../modules/x-pack-ccr/plugin-security.policy |     4 +
+ .../modules/x-pack-ccr/x-pack-ccr-7.7.0.jar   |   Bin 0 -> 280807 bytes
+ .../modules/x-pack-core/LICENSE.txt           |   223 +
+ .../modules/x-pack-core/NOTICE.txt            |  1532 +
+ .../x-pack-core/commons-codec-1.11.jar        |   Bin 0 -> 335042 bytes
+ .../x-pack-core/commons-logging-1.1.3.jar     |   Bin 0 -> 62050 bytes
+ .../x-pack-core/elasticsearch-nio-7.7.0.jar   |   Bin 0 -> 60236 bytes
+ .../elasticsearch-ssl-config-7.7.0.jar        |   Bin 0 -> 67290 bytes
+ .../x-pack-core/httpasyncclient-4.1.4.jar     |   Bin 0 -> 179964 bytes
+ .../modules/x-pack-core/httpclient-4.5.10.jar |   Bin 0 -> 774640 bytes
+ .../modules/x-pack-core/httpcore-4.4.12.jar   |   Bin 0 -> 328347 bytes
+ .../x-pack-core/httpcore-nio-4.4.12.jar       |   Bin 0 -> 367672 bytes
+ .../x-pack-core/log4j-1.2-api-2.11.1.jar      |   Bin 0 -> 63731 bytes
+ .../x-pack-core/netty-buffer-4.1.45.Final.jar |   Bin 0 -> 278395 bytes
+ .../x-pack-core/netty-codec-4.1.45.Final.jar  |   Bin 0 -> 318353 bytes
+ .../netty-codec-http-4.1.45.Final.jar         |   Bin 0 -> 608266 bytes
+ .../x-pack-core/netty-common-4.1.45.Final.jar |   Bin 0 -> 611552 bytes
+ .../netty-handler-4.1.45.Final.jar            |   Bin 0 -> 449349 bytes
+ .../netty-resolver-4.1.45.Final.jar           |   Bin 0 -> 32798 bytes
+ .../netty-transport-4.1.45.Final.jar          |   Bin 0 -> 472685 bytes
+ .../x-pack-core/plugin-descriptor.properties  |    45 +
+ .../x-pack-core/plugin-security.policy        |    40 +
+ .../transport-netty4-client-7.7.0.jar         |   Bin 0 -> 74133 bytes
+ .../transport-nio-client-7.7.0.jar            |   Bin 0 -> 67453 bytes
+ .../x-pack-core/unboundid-ldapsdk-4.0.8.jar   |   Bin 0 -> 4115911 bytes
+ .../modules/x-pack-core/x-pack-core-7.7.0.jar |   Bin 0 -> 3367406 bytes
+ .../modules/x-pack-deprecation/LICENSE.txt    |   223 +
+ .../modules/x-pack-deprecation/NOTICE.txt     |     4 +
+ .../plugin-descriptor.properties              |    45 +
+ .../x-pack-deprecation/plugin-security.policy |    25 +
+ .../x-pack-deprecation-7.7.0.jar              |   Bin 0 -> 35810 bytes
+ .../modules/x-pack-enrich/LICENSE.txt         |   223 +
+ .../modules/x-pack-enrich/NOTICE.txt          |     4 +
+ .../plugin-descriptor.properties              |    45 +
+ .../x-pack-enrich/x-pack-enrich-7.7.0.jar     |   Bin 0 -> 125006 bytes
+ .../modules/x-pack-eql/LICENSE.txt            |   223 +
+ .../modules/x-pack-eql/NOTICE.txt             |     4 +
+ .../x-pack-eql/plugin-descriptor.properties   |    45 +
+ .../modules/x-pack-eql/plugin-security.policy |     0
+ .../modules/x-pack-eql/x-pack-eql-7.7.0.jar   |   Bin 0 -> 247039 bytes
+ .../modules/x-pack-graph/LICENSE.txt          |   223 +
+ .../modules/x-pack-graph/NOTICE.txt           |     4 +
+ .../x-pack-graph/plugin-descriptor.properties |    45 +
+ .../x-pack-graph/plugin-security.policy       |    25 +
+ .../x-pack-graph/x-pack-graph-7.7.0.jar       |   Bin 0 -> 34651 bytes
+ .../x-pack-identity-provider/LICENSE.txt      |   223 +
+ .../x-pack-identity-provider/NOTICE.txt       |  2597 +
+ .../cryptacular-1.2.4.jar                     |   Bin 0 -> 162471 bytes
+ .../x-pack-identity-provider/guava-19.0.jar   |   Bin 0 -> 2308517 bytes
+ .../httpclient-cache-4.5.10.jar               |   Bin 0 -> 164197 bytes
+ .../java-support-7.5.1.jar                    |   Bin 0 -> 272381 bytes
+ .../log4j-slf4j-impl-2.11.1.jar               |   Bin 0 -> 23241 bytes
+ .../metrics-core-3.2.2.jar                    |   Bin 0 -> 129402 bytes
+ .../opensaml-core-3.4.5.jar                   |   Bin 0 -> 181870 bytes
+ .../opensaml-messaging-api-3.4.5.jar          |   Bin 0 -> 56249 bytes
+ .../opensaml-messaging-impl-3.4.5.jar         |   Bin 0 -> 19637 bytes
+ .../opensaml-profile-api-3.4.5.jar            |   Bin 0 -> 31118 bytes
+ .../opensaml-profile-impl-3.4.5.jar           |   Bin 0 -> 27488 bytes
+ .../opensaml-saml-api-3.4.5.jar               |   Bin 0 -> 407731 bytes
+ .../opensaml-saml-impl-3.4.5.jar              |   Bin 0 -> 1169221 bytes
+ .../opensaml-security-api-3.4.5.jar           |   Bin 0 -> 66957 bytes
+ .../opensaml-security-impl-3.4.5.jar          |   Bin 0 -> 112079 bytes
+ .../opensaml-soap-api-3.4.5.jar               |   Bin 0 -> 169987 bytes
+ .../opensaml-soap-impl-3.4.5.jar              |   Bin 0 -> 403255 bytes
+ .../opensaml-storage-api-3.4.5.jar            |   Bin 0 -> 23813 bytes
+ .../opensaml-storage-impl-3.4.5.jar           |   Bin 0 -> 74816 bytes
+ .../opensaml-xmlsec-api-3.4.5.jar             |   Bin 0 -> 209519 bytes
+ .../opensaml-xmlsec-impl-3.4.5.jar            |   Bin 0 -> 297343 bytes
+ .../plugin-descriptor.properties              |    45 +
+ .../plugin-security.policy                    |    29 +
+ .../slf4j-api-1.6.2.jar                       |   Bin 0 -> 25689 bytes
+ .../x-pack-identity-provider-7.7.0.jar        |   Bin 0 -> 207439 bytes
+ .../x-pack-identity-provider/xmlsec-2.1.4.jar |   Bin 0 -> 1129826 bytes
+ .../modules/x-pack-ilm/LICENSE.txt            |   223 +
+ .../modules/x-pack-ilm/NOTICE.txt             |     4 +
+ .../x-pack-ilm/plugin-descriptor.properties   |    45 +
+ .../modules/x-pack-ilm/x-pack-ilm-7.7.0.jar   |   Bin 0 -> 220376 bytes
+ .../modules/x-pack-logstash/LICENSE.txt       |   223 +
+ .../modules/x-pack-logstash/NOTICE.txt        |     4 +
+ .../plugin-descriptor.properties              |    45 +
+ .../x-pack-logstash/plugin-security.policy    |    25 +
+ .../x-pack-logstash/x-pack-logstash-7.7.0.jar |   Bin 0 -> 9901 bytes
+ .../modules/x-pack-ml/LICENSE.txt             |   223 +
+ .../modules/x-pack-ml/NOTICE.txt              |  1606 +
+ .../x-pack-ml/elasticsearch-grok-7.7.0.jar    |   Bin 0 -> 33951 bytes
+ .../modules/x-pack-ml/icu4j-62.1.jar          |   Bin 0 -> 12370975 bytes
+ .../modules/x-pack-ml/jcodings-1.0.44.jar     |   Bin 0 -> 1682608 bytes
+ .../modules/x-pack-ml/joni-2.1.29.jar         |   Bin 0 -> 214815 bytes
+ .../windows-x86_64/bin/autoconfig.exe         |   Bin 0 -> 361472 bytes
+ .../windows-x86_64/bin/autodetect.exe         |   Bin 0 -> 461824 bytes
+ .../bin/boost_chrono-vc141-mt-x64-1_71.dll    |   Bin 0 -> 40448 bytes
+ .../bin/boost_date_time-vc141-mt-x64-1_71.dll |   Bin 0 -> 56320 bytes
+ .../boost_filesystem-vc141-mt-x64-1_71.dll    |   Bin 0 -> 120320 bytes
+ .../bin/boost_iostreams-vc141-mt-x64-1_71.dll |   Bin 0 -> 87552 bytes
+ .../bin/boost_log-vc141-mt-x64-1_71.dll       |   Bin 0 -> 611840 bytes
+ .../bin/boost_log_setup-vc141-mt-x64-1_71.dll |   Bin 0 -> 627712 bytes
+ ...oost_program_options-vc141-mt-x64-1_71.dll |   Bin 0 -> 491008 bytes
+ .../bin/boost_regex-vc141-mt-x64-1_71.dll     |   Bin 0 -> 1071104 bytes
+ .../bin/boost_system-vc141-mt-x64-1_71.dll    |   Bin 0 -> 9728 bytes
+ .../bin/boost_thread-vc141-mt-x64-1_71.dll    |   Bin 0 -> 100864 bytes
+ .../windows-x86_64/bin/categorize.exe         |   Bin 0 -> 434176 bytes
+ .../platform/windows-x86_64/bin/concrt140.dll |   Bin 0 -> 344712 bytes
+ .../windows-x86_64/bin/controller.exe         |   Bin 0 -> 349184 bytes
+ .../bin/data_frame_analyzer.exe               |   Bin 0 -> 416256 bytes
+ .../platform/windows-x86_64/bin/libMlApi.dll  |   Bin 0 -> 1774592 bytes
+ .../windows-x86_64/bin/libMlConfig.dll        |   Bin 0 -> 1083904 bytes
+ .../platform/windows-x86_64/bin/libMlCore.dll |   Bin 0 -> 1800192 bytes
+ .../windows-x86_64/bin/libMlMaths.dll         |   Bin 0 -> 8069120 bytes
+ .../windows-x86_64/bin/libMlModel.dll         |   Bin 0 -> 5559296 bytes
+ .../platform/windows-x86_64/bin/libxml2.dll   |   Bin 0 -> 1326592 bytes
+ .../platform/windows-x86_64/bin/msvcp140.dll  |   Bin 0 -> 687240 bytes
+ .../platform/windows-x86_64/bin/normalize.exe |   Bin 0 -> 381952 bytes
+ .../windows-x86_64/bin/vccorlib140.dll        |   Bin 0 -> 391832 bytes
+ .../windows-x86_64/bin/vcruntime140.dll       |   Bin 0 -> 89752 bytes
+ .../platform/windows-x86_64/bin/zlib1.dll     |   Bin 0 -> 87040 bytes
+ .../resources/date_time_zonespec.csv          |   386 +
+ .../windows-x86_64/resources/ml-en.dict       | 76782 ++++++++++++++++
+ .../x-pack-ml/plugin-descriptor.properties    |    45 +
+ .../x-pack-ml/plugin-security-test.policy     |     5 +
+ .../modules/x-pack-ml/plugin-security.policy  |    30 +
+ .../modules/x-pack-ml/super-csv-2.4.0.jar     |   Bin 0 -> 98092 bytes
+ .../modules/x-pack-ml/x-pack-ml-7.7.0.jar     |   Bin 0 -> 1994445 bytes
+ .../modules/x-pack-monitoring/LICENSE.txt     |   223 +
+ .../modules/x-pack-monitoring/NOTICE.txt      |     4 +
+ .../elasticsearch-rest-client-7.7.0.jar       |   Bin 0 -> 63583 bytes
+ ...lasticsearch-rest-client-sniffer-7.7.0.jar |   Bin 0 -> 25400 bytes
+ .../plugin-descriptor.properties              |    45 +
+ .../x-pack-monitoring/plugin-security.policy  |    39 +
+ .../x-pack-monitoring-7.7.0.jar               |   Bin 0 -> 213303 bytes
+ .../modules/x-pack-ql/LICENSE.txt             |   223 +
+ .../modules/x-pack-ql/NOTICE.txt              |     4 +
+ .../x-pack-ql/plugin-descriptor.properties    |    45 +
+ .../modules/x-pack-ql/x-pack-ql-7.7.0.jar     |   Bin 0 -> 478030 bytes
+ .../modules/x-pack-rollup/LICENSE.txt         |   223 +
+ .../modules/x-pack-rollup/NOTICE.txt          |     4 +
+ .../plugin-descriptor.properties              |    45 +
+ .../x-pack-rollup/plugin-security.policy      |     0
+ .../x-pack-rollup/x-pack-rollup-7.7.0.jar     |   Bin 0 -> 128533 bytes
+ .../modules/x-pack-security/LICENSE.txt       |   223 +
+ .../modules/x-pack-security/NOTICE.txt        |  4624 +
+ .../x-pack-security/accessors-smart-1.2.jar   |   Bin 0 -> 30035 bytes
+ .../modules/x-pack-security/asm-7.1.jar       |   Bin 0 -> 114762 bytes
+ .../x-pack-security/cryptacular-1.2.4.jar     |   Bin 0 ->

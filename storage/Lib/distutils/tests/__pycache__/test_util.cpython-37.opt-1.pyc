@@ -1,0 +1,197 @@
+OR /F "usebackq tokens=1* delims= " %%A IN (!params!) DO (
++    SET current=%%A
++    SET params='%%B'
++	SET silent=N
++
++	IF "!current!" == "-s" (
++		SET silent=Y
++	)
++	IF "!current!" == "--silent" (
++		SET silent=Y
++	)
++
++	IF "!current!" == "-h" (
++		SET checkpassword=N
++	)
++	IF "!current!" == "--help" (
++		SET checkpassword=N
++	)
++
++	IF "!current!" == "-V" (
++		SET checkpassword=N
++	)
++	IF "!current!" == "--version" (
++		SET checkpassword=N
++	)
++
++	IF "!silent!" == "Y" (
++		SET nopauseonerror=Y
++	) ELSE (
++	    IF "x!newparams!" NEQ "x" (
++	        SET newparams=!newparams! !current!
++        ) ELSE (
++            SET newparams=!current!
++        )
++	)
++
++    IF "x!params!" NEQ "x" (
++		GOTO loop
++	)
++)
++
++CALL "%~dp0elasticsearch-env.bat" || exit /b 1
++IF ERRORLEVEL 1 (
++	IF NOT DEFINED nopauseonerror (
++		PAUSE
++	)
++	EXIT /B %ERRORLEVEL%
++)
++
++SET KEYSTORE_PASSWORD=
++IF "%checkpassword%"=="Y" (
++  CALL "%~dp0elasticsearch-keystore.bat" has-passwd --silent
++  IF !ERRORLEVEL! EQU 0 (
++    SET /P KEYSTORE_PASSWORD=Elasticsearch keystore password:
++    IF !ERRORLEVEL! NEQ 0 (
++      ECHO Failed to read keystore password on standard input
++      EXIT /B !ERRORLEVEL!
++    )
++  )
++)
++
++if not defined ES_TMPDIR (
++  for /f "tokens=* usebackq" %%a in (`CALL %JAVA% -cp "!ES_CLASSPATH!" "org.elasticsearch.tools.launchers.TempDirectory"`) do set  ES_TMPDIR=%%a
++)
++
++rem The JVM options parser produces the final JVM options to start
++rem Elasticsearch. It does this by incorporating JVM options in the following
++rem way:
++rem   - first, system JVM options are applied (these are hardcoded options in
++rem     the parser)
++rem   - second, JVM options are read from jvm.options and
++rem     jvm.options.d/*.options
++rem   - third, JVM options from ES_JAVA_OPTS are applied
++rem   - fourth, ergonomic JVM options are applied
++@setlocal
++for /F "usebackq delims=" %%a in (`CALL %JAVA% -cp "!ES_CLASSPATH!" "org.elasticsearch.tools.launchers.JvmOptionsParser" "!ES_PATH_CONF!" ^|^| echo jvm_options_parser_failed`) do set ES_JAVA_OPTS=%%a
++@endlocal & set "MAYBE_JVM_OPTIONS_PARSER_FAILED=%ES_JAVA_OPTS%" & set ES_JAVA_OPTS=%ES_JAVA_OPTS%
++
++if "%MAYBE_JVM_OPTIONS_PARSER_FAILED%" == "jvm_options_parser_failed" (
++  exit /b 1
++)
++
++rem windows batch pipe will choke on special characters in strings
++SET KEYSTORE_PASSWORD=!KEYSTORE_PASSWORD:^^=^^^^!
++SET KEYSTORE_PASSWORD=!KEYSTORE_PASSWORD:^&=^^^&!
++SET KEYSTORE_PASSWORD=!KEYSTORE_PASSWORD:^|=^^^|!
++SET KEYSTORE_PASSWORD=!KEYSTORE_PASSWORD:^<=^^^<!
++SET KEYSTORE_PASSWORD=!KEYSTORE_PASSWORD:^>=^^^>!
++SET KEYSTORE_PASSWORD=!KEYSTORE_PASSWORD:^\=^^^\!
++
++ECHO.!KEYSTORE_PASSWORD!| %JAVA% %ES_JAVA_OPTS% -Delasticsearch ^
++  -Des.path.home="%ES_HOME%" -Des.path.conf="%ES_PATH_CONF%" ^
++  -Des.distribution.flavor="%ES_DISTRIBUTION_FLAVOR%" ^
++  -Des.distribution.type="%ES_DISTRIBUTION_TYPE%" ^
++  -Des.bundled_jdk="%ES_BUNDLED_JDK%" ^
++  -cp "%ES_CLASSPATH%" "org.elasticsearch.bootstrap.Elasticsearch" !newparams!
++
++endlocal
++endlocal
++exit /b %ERRORLEVEL%
+diff --git a/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-env b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-env
+new file mode 100644
+index 0000000000000000000000000000000000000000..cc25b86f69873f687556a74f1ec14f6219991494
+--- /dev/null
++++ b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-env
+@@ -0,0 +1,8 @@
++#!/bin/bash
++
++# Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
++# or more contributor license agreements. Licensed under the Elastic License;
++# you may not use this file except in compliance with the Elastic License.
++
++# include x-pack-core jars in classpath
++ES_CLASSPATH="$ES_CLASSPATH:$ES_HOME/modules/x-pack-core/*"
+diff --git a/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-env.bat b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-env.bat
+new file mode 100644
+index 0000000000000000000000000000000000000000..fc97721a737d1cece746f75e42f02555edd33399
+--- /dev/null
++++ b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-env.bat
+@@ -0,0 +1,5 @@
++rem Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
++rem or more contributor license agreements. Licensed under the Elastic License;
++rem you may not use this file except in compliance with the Elastic License.
++
++set ES_CLASSPATH=!ES_CLASSPATH!;!ES_HOME!/modules/x-pack-core/*
+diff --git a/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-security-env b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-security-env
+new file mode 100644
+index 0000000000000000000000000000000000000000..7d8010deec5ea0ad911caa84bffe11f90b58a69a
+--- /dev/null
++++ b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-security-env
+@@ -0,0 +1,8 @@
++#!/bin/bash
++
++# Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
++# or more contributor license agreements. Licensed under the Elastic License;
++# you may not use this file except in compliance with the Elastic License.
++
++# include x-pack-security jars in classpath
++ES_CLASSPATH="$ES_CLASSPATH:$ES_HOME/modules/x-pack-security/*"
+diff --git a/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-security-env.bat b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-security-env.bat
+new file mode 100644
+index 0000000000000000000000000000000000000000..d003412fc08d9c1caf4a3ea44e39c9cce9d505bc
+--- /dev/null
++++ b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-security-env.bat
+@@ -0,0 +1,5 @@
++rem Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
++rem or more contributor license agreements. Licensed under the Elastic License;
++rem you may not use this file except in compliance with the Elastic License.
++
++set ES_CLASSPATH=!ES_CLASSPATH!;!ES_HOME!/modules/x-pack-security/*
+diff --git a/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-watcher-env b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-watcher-env
+new file mode 100644
+index 0000000000000000000000000000000000000000..83045297a0c68eb69a2a6b97be28fbc4fdcb1bf1
+--- /dev/null
++++ b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-watcher-env
+@@ -0,0 +1,8 @@
++#!/bin/bash
++
++# Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
++# or more contributor license agreements. Licensed under the Elastic License;
++# you may not use this file except in compliance with the Elastic License.
++
++# include x-pack-security jars in classpath
++ES_CLASSPATH="$ES_CLASSPATH:$ES_HOME/modules/x-pack-watcher/*"
+diff --git a/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-watcher-env.bat b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-watcher-env.bat
+new file mode 100644
+index 0000000000000000000000000000000000000000..4c7f762dca26c1ce1cbf2c0eb6c12c5b33a32224
+--- /dev/null
++++ b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/x-pack-watcher-env.bat
+@@ -0,0 +1,5 @@
++rem Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
++rem or more contributor license agreements. Licensed under the Elastic License;
++rem you may not use this file except in compliance with the Elastic License.
++
++set ES_CLASSPATH=!ES_CLASSPATH!;!ES_HOME!/modules/x-pack-watcher/*
+diff --git a/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/config/elasticsearch.keystore b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/config/elasticsearch.keystore
+new file mode 100644
+index 0000000000000000000000000000000000000000..c55a7382a235d0f58300c220452f05bd27557e57
+GIT binary patch
+literal 199
+zcmcD&o+B=nnv+;ul9^nbnpl*ap_iRnSzMA|l*+)szyib!lY!WwJM)uZ>CJ~4UBCXV
+zjbX8FY*#gV{If#ran11=9WUZFkKR3dI6w1?=I*5(_P2|<H_XlEpIF}K7yMK9)|sje
+z6H8_R&ET<q@~B&5<9<V}cSeaozO{Yir;8=U{T*l1E*uOjRp)qe!~0!h|D(sXmqG#+
+wZM@Hj=Wo%tD*u4rmBEH3>nc;HN!H=@$>%?Oo)LKQfX3t(KqJ7w{KxwX07|x3ng9R*
+
+literal 0
+HcmV?d00001
+
+diff --git a/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/config/elasticsearch.yml b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/config/elasticsearch.yml
+new file mode 100644
+index 0000000000000000000000000000000000000000..239bf9b175f541c8b26a9be8c5bf0920d38da5db
+--- /dev/null
++++ b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/config/elasticsearch.yml
+@@ -0,0 +1,88 @@
++# ======================== Elasticsearch Configuration =========================
++#
++# NOTE: Elasticsearch comes with reasonable defaults for most setting

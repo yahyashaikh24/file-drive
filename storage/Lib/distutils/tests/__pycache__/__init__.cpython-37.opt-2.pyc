@@ -1,0 +1,12 @@
+cD&o+HjtoSL4SnpaZHz`(%S+V``n*iFNw^Jb{SzW<IfjAb0Gj2u825Lhb%Bp87L
+zOz}l%3ZprEN|RIbQY}pWLjgzwj18kfVqn0+lb4^88ef)LRGgWg$8K(5ZeU<(DVmd5
+zToRv{oSa%vl9~dOWim47NiHoa0y;6iB(*4)(U2XiIWtAfsJu8Ot171~B-AXuAk{xT
+Vr?@oF&GCT7<QFiDdbS@^1^{R{R`CD;
+
+literal 0
+HcmV?d00001
+
+diff --git a/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/data/nodes/0/_state/write.lock b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/data/nodes/0/_state/write.lock
+new file mode 100644
+index 0000000000000000000000000000000000000000..e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+diff --git a/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/data/nodes/0/node.lock b/file_drive-master/content/assets/elastics

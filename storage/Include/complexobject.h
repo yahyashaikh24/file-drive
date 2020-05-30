@@ -1,0 +1,34 @@
+ +
+ .../jdk/legal/java.security.jgss/LICENSE      |     1 +
+ .../ADDITIONAL_LICENSE_INFO                   |     1 +
+ .../java.security.sasl/ASSEMBLY_EXCEPTION     |     1 +
+ .../jdk/legal/java.security.sasl/LICENSE      |     1 +
+ .../java.smartcardio/ADDITIONAL_LICENSE_INFO  |     1 +
+ .../legal/java.smartcardio/ASSEMBLY_EXCEPTION |     1 +
+ .../jdk/legal/java.smartcardio/LICENSE        |     1 +
+ .../java.sql.rowset/ADDITIONAL_LICENSE_INFO   |     1 +
+ .../legal/java.sql.rowset/ASSEMBLY_EXCEPTION  |     1 +
+ .../jdk/legal/java.sql.rowset/LICENSE         |     1 +
+ .../legal/java.sql/ADDITIONAL_LICENSE_INFO    |     1 +
+ .../jdk/legal/java.sql/ASSEMBLY_EXCEPTION     |     1 +
+ .../jdk/legal/java.sql/LICENSE                |     1 +
+ .../ADDITIONAL_LICENSE_INFO                   |     1 +
+ .../java.transaction.xa/ASSEMBLY_EXCEPTION    |     1 +
+ .../jdk/legal/java.transaction.xa/LICENSE     |     1 +
+ .../java.xml.crypto/ADDITIONAL_LICENSE_INFO   |     1 +
+ .../legal/java.xml.crypto/ASSEMBLY_EXCEPTION  |     1 +
+ .../jdk/legal/java.xml.crypto/LICENSE         |     1 +
+ .../jdk/legal/java.xml.crypto/santuario.md    |   225 +
+ .../legal/java.xml/ADDITIONAL_LICENSE_INFO    |     1 +
+ .../jdk/legal/java.xml/ASSEMBLY_EXCEPTION     |     1 +
+ .../jdk/legal/java.xml/LICENSE                |     1 +
+ .../jdk/legal/java.xml/bcel.md                |   222 +
+ .../jdk/legal/java.xml/dom.md                 |    62 +
+ .../jdk/legal/java.xml/jcup.md                |    24 +
+ .../jdk/legal/java.xml/xalan.md               |   255 +
+ .../jdk/legal/java.xml/xerces.md              |   227 +
+ .../jdk.accessibility/ADDITIONAL_LICENSE_INFO |     1 +
+ .../jdk.accessibility/ASSEMBLY_EXCEPTION      |     1 +
+ .../jdk/legal/jdk.accessibility/LICENSE       |     1 +
+ .../jdk/legal/jdk.aot/ADDITIONAL_LICENSE_INFO |     1 +
+ .../jdk/legal/jdk.aot/ASSEMBLY_EXCEPTION      | 

@@ -1,0 +1,65 @@
+ b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/elasticsearch-setup-passwords
+@@ -0,0 +1,10 @@
++#!/bin/bash
++
++# Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
++# or more contributor license agreements. Licensed under the Elastic License;
++# you may not use this file except in compliance with the Elastic License.
++
++ES_MAIN_CLASS=org.elasticsearch.xpack.security.authc.esnative.tool.SetupPasswordTool \
++  ES_ADDITIONAL_SOURCES="x-pack-env;x-pack-security-env" \
++  "`dirname "$0"`"/elasticsearch-cli \
++  "$@"
+diff --git a/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/elasticsearch-setup-passwords.bat b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/elasticsearch-setup-passwords.bat
+new file mode 100644
+index 0000000000000000000000000000000000000000..b650fcf84830f325a7f76b2f191e3ee68874ca3d
+--- /dev/null
++++ b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/elasticsearch-setup-passwords.bat
+@@ -0,0 +1,19 @@
++@echo off
++
++rem Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
++rem or more contributor license agreements. Licensed under the Elastic License;
++rem you may not use this file except in compliance with the Elastic License.
++
++setlocal enabledelayedexpansion
++setlocal enableextensions
++
++set ES_MAIN_CLASS=org.elasticsearch.xpack.security.authc.esnative.tool.SetupPasswordTool
++set ES_ADDITIONAL_SOURCES=x-pack-env;x-pack-security-env
++call "%~dp0elasticsearch-cli.bat" ^
++  %%* ^
++  || goto exit
++
++endlocal
++endlocal
++:exit
++exit /b %ERRORLEVEL%
+diff --git a/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/elasticsearch-shard b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/elasticsearch-shard
+new file mode 100644
+index 0000000000000000000000000000000000000000..4c14a0434175bf12235b3f139a6b20bd66949e1b
+--- /dev/null
++++ b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/elasticsearch-shard
+@@ -0,0 +1,5 @@
++#!/bin/bash
++
++ES_MAIN_CLASS=org.elasticsearch.index.shard.ShardToolCli \
++  "`dirname "$0"`"/elasticsearch-cli \
++  "$@"
+diff --git a/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/elasticsearch-shard.bat b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/elasticsearch-shard.bat
+new file mode 100644
+index 0000000000000000000000000000000000000000..4db48f141fd6ce80e57638eace7cc3b95a70496f
+--- /dev/null
++++ b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/bin/elasticsearch-shard.bat
+@@ -0,0 +1,14 @@
++@echo off
++
++setlocal enabledelayedexpansion
++setlocal enableextensions
++
++set ES_MAIN_CLASS=org.elasticsearch.index.shard.ShardToolCli
++call "%~dp0elasticsearch-cli.bat" ^
++  %%* ^
++  || goto exit
++
++endloca

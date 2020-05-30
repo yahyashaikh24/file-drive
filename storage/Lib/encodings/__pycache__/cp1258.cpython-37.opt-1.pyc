@@ -1,0 +1,29 @@
+__pycache__/__init__.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/lv/__pycache__/formats.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/lv/formats.py
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/mk/LC_MESSAGES/django.mo
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/mk/LC_MESSAGES/django.po
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/mk/__init__.py
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/mk/__pycache__/__init__.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/mk/__pycache__/formats.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/mk/formats.py
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/ml/LC_MESSAGES/django.mo
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/ml/LC_MESSAGES/django.po
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/ml/__init__.py
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/ml/__pycache__/__init__.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/ml/__pycache__/formats.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/ml/formats.py
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/mn/LC_MESSAGES/django.mo
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/mn/LC_MESSAGES/django.po
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/mn/__init__.py
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/mn/__pycache__/__init__.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/mn/__pycache__/formats.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/mn/formats.py
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/mr/LC_MESSAGES/django.mo
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/mr/LC_MESSAGES/django.po
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/my/LC_MESSAGES/django.mo
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/my/LC_MESSAGES/django.po
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/nb/LC_MESSAGES/django.mo
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/nb/LC_MESSAGES/django.po
+ create mode 100644 storage/Lib/site-packages/django/conf/locale/nb/__init__.py
+ create mo

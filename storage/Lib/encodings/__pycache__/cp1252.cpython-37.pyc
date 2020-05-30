@@ -1,0 +1,41 @@
+.0.jar   |   Bin 0 -> 39610 bytes
+ .../modules/x-pack-sql/sql-proto-7.7.0.jar    |   Bin 0 -> 32599 bytes
+ .../modules/x-pack-sql/x-pack-sql-7.7.0.jar   |   Bin 0 -> 1131238 bytes
+ .../x-pack-voting-only-node/LICENSE.txt       |   223 +
+ .../x-pack-voting-only-node/NOTICE.txt        |     4 +
+ .../plugin-descriptor.properties              |    45 +
+ .../x-pack-voting-only-node-7.7.0.jar         |   Bin 0 -> 17453 bytes
+ .../modules/x-pack-watcher/LICENSE.txt        |   223 +
+ .../modules/x-pack-watcher/NOTICE.txt         |  1426 +
+ .../x-pack-watcher/failureaccess-1.0.1.jar    |   Bin 0 -> 4617 bytes
+ .../modules/x-pack-watcher/guava-27.1-jre.jar |   Bin 0 -> 2746671 bytes
+ .../jakarta.activation-1.2.1.jar              |   Bin 0 -> 65690 bytes
+ .../x-pack-watcher/jakarta.mail-1.6.4.jar     |   Bin 0 -> 660167 bytes
+ .../owasp-java-html-sanitizer-20191001.1.jar  |   Bin 0 -> 233620 bytes
+ .../plugin-descriptor.properties              |    45 +
+ .../x-pack-watcher/plugin-security.policy     |    36 +
+ .../x-pack-watcher/x-pack-watcher-7.7.0.jar   |   Bin 0 -> 743590 bytes
+ file_drive-master/content/assets/favicon.png  |   Bin 0 -> 34189 bytes
+ file_drive-master/content/assets/favicon1.ico |   Bin 0 -> 1150 bytes
+ .../content/assets/icons/LICENSE.txt          |    34 +
+ .../content/assets/icons/css/all.css          |  4556 +
+ .../content/assets/icons/css/all.min.css      |     5 +
+ .../content/assets/icons/css/brands.css       |    15 +
+ .../content/assets/icons/css/brands.min.css   |     5 +
+ .../content/assets/icons/css/fontawesome.css  |  4522 +
+ .../assets/icons/css/fontawesome.min.css      |     5 +
+ .../content/assets/icons/css/regular.css      |    15 +
+ .../content/assets/icons/css/regular.min.css  |     5 +
+ .../content/assets/icons/css/solid.css        |    16 +
+ .../content/assets/icons/css/solid.min.css    |     5 +
+ .../content/assets/icons/css/svg-with-js.css  |   371 +
+ .../assets/icons/css/svg-with-js.min.css      |     5 +
+ .../content/assets/icons/css/v4-shims.css     |  2172 +
+ .../content/assets/icons/css/v4-shims.min.css |     5 +
+ .../content/assets/icons/js/all.js            |  4441 +
+ .../content/assets/icons/js/all.min.js        |     5 +
+ .../content/assets/icons/js/brands.js         |   571 +
+ .../content/assets/icons/js/brands.min.js     |     5 +
+ .../assets/icons/js/conflict-detection.js     |   998 +
+ .../assets/icons/js/conflict-detection.min.js |     5 +
+ .../content/assets/icons/js/fontawesome.js    |  2478

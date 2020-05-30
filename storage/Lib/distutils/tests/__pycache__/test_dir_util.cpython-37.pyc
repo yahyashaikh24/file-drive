@@ -1,0 +1,76 @@
+ssions/locale/sk/LC_MESSAGES/django.po  |    36 +
+ .../sessions/locale/sl/LC_MESSAGES/django.mo  |   Bin 0 -> 770 bytes
+ .../sessions/locale/sl/LC_MESSAGES/django.po  |    38 +
+ .../sessions/locale/sq/LC_MESSAGES/django.mo  |   Bin 0 -> 683 bytes
+ .../sessions/locale/sq/LC_MESSAGES/django.po  |    36 +
+ .../sessions/locale/sr/LC_MESSAGES/django.mo  |   Bin 0 -> 855 bytes
+ .../sessions/locale/sr/LC_MESSAGES/django.po  |    38 +
+ .../locale/sr_Latn/LC_MESSAGES/django.mo      |   Bin 0 -> 757 bytes
+ .../locale/sr_Latn/LC_MESSAGES/django.po      |    38 +
+ .../sessions/locale/sv/LC_MESSAGES/django.mo  |   Bin 0 -> 707 bytes
+ .../sessions/locale/sv/LC_MESSAGES/django.po  |    37 +
+ .../sessions/locale/sw/LC_MESSAGES/django.mo  |   Bin 0 -> 743 bytes
+ .../sessions/locale/sw/LC_MESSAGES/django.po  |    36 +
+ .../sessions/locale/ta/LC_MESSAGES/django.mo  |   Bin 0 -> 801 bytes
+ .../sessions/locale/ta/LC_MESSAGES/django.po  |    35 +
+ .../sessions/locale/te/LC_MESSAGES/django.mo  |   Bin 0 -> 786 bytes
+ .../sessions/locale/te/LC_MESSAGES/django.po  |    36 +
+ .../sessions/locale/th/LC_MESSAGES/django.mo  |   Bin 0 -> 814 bytes
+ .../sessions/locale/th/LC_MESSAGES/django.po  |    36 +
+ .../sessions/locale/tr/LC_MESSAGES/django.mo  |   Bin 0 -> 685 bytes
+ .../sessions/locale/tr/LC_MESSAGES/django.po  |    37 +
+ .../sessions/locale/tt/LC_MESSAGES/django.mo  |   Bin 0 -> 806 bytes
+ .../sessions/locale/tt/LC_MESSAGES/django.po  |    36 +
+ .../sessions/locale/udm/LC_MESSAGES/django.mo |   Bin 0 -> 462 bytes
+ .../sessions/locale/udm/LC_MESSAGES/django.po |    35 +
+ .../sessions/locale/uk/LC_MESSAGES/django.mo  |   Bin 0 -> 841 bytes
+ .../sessions/locale/uk/LC_MESSAGES/django.po  |    38 +
+ .../sessions/locale/ur/LC_MESSAGES/django.mo  |   Bin 0 -> 729 bytes
+ .../sessions/locale/ur/LC_MESSAGES/django.po  |    35 +
+ .../sessions/locale/uz/LC_MESSAGES/django.mo  |   Bin 0 -> 744 bytes
+ .../sessions/locale/uz/LC_MESSAGES/django.po  |    35 +
+ .../sessions/locale/vi/LC_MESSAGES/django.mo  |   Bin 0 -> 679 bytes
+ .../sessions/locale/vi/LC_MESSAGES/django.po  |    38 +
+ .../locale/zh_Hans/LC_MESSAGES/django.mo      |   Bin 0 -> 722 bytes
+ .../locale/zh_Hans/LC_MESSAGES/django.po      |    37 +
+ .../locale/zh_Hant/LC_MESSAGES/django.mo      |   Bin 0 -> 733 bytes
+ .../locale/zh_Hant/LC_MESSAGES/django.po      |    37 +
+ .../__pycache__/clearsessions.cpython-37.pyc  |   Bin 0 -> 995 bytes
+ .../management/commands/clearsessions.py      |    19 +
+ .../django/contrib/sessions/middleware.py     |    74 +
+ .../sessions/migrations/0001_initial.py       |    30 +
+ .../contrib/sessions/migrations/__init__.py   |     0
+ .../__pycache__/0001_initial.cpython-37.pyc   |   Bin 0 -> 1008 bytes
+ .../__pycache__/__init__.cpython-37.pyc       |   Bin 0 -> 195 bytes
+ .../django/contrib/sessions/models.py         |    35 +
+ .../django/contrib/sessions/serializers.py    |    20 +
+ .../django/contrib/sitemaps/__init__.py       |   163 +
+ .../__pycache__/__init__.cpython-37.pyc       |   Bin 0 -> 4909 bytes
+ .../sitemaps/__pycache__/apps.cpython-37.pyc  |   Bin 0 -> 523 bytes
+ .../sitemaps/__pycache__/views.cpython-37.pyc |   Bin 0 -> 2581 bytes
+ .../django/contrib/sitemaps/apps.py           |     7 +
+ .../__pycache__/ping_google.cpython-37.pyc    |   Bin 0 -> 1004 bytes
+ .../management/commands/ping_google.py        |    16 +
+ .../contrib/sitemaps/templates/sitemap.xml    |    13 +
+ .../sitemaps/templates/sitemap_index.xml      |     4 +
+ .../django/contrib/sitemaps/views.py          |    92 +
+ .../django/contrib/sites/__init__.py          |     1 +
+ .../sites/__pycache__/__init__.cpython-37.pyc |   Bin 0 -> 241 bytes
+ .../sites/__pycache__/admin.cpython-37.pyc    |   Bin 0 -> 523 bytes
+ .../sites/__pycache__/apps.cpython-37.pyc     |   Bin 0 -> 783 bytes
+ .../__pycache__/management.cpython-37.pyc     |   Bin 0 -> 1205 bytes
+ .../sites/__pycache__/managers.cpython-37.pyc |   Bin 0 -> 2165 bytes
+ .../__pycache__/middleware.cpython-37.pyc     |   Bin 0 -> 719 bytes
+ .../sites/__pycache__/models.cpython-37.pyc   |   Bin 0 -> 4199 bytes
+ .../sites/__pycache__/requests.cpython-37.pyc |   Bin 0 -> 1242 bytes
+ .../__pycache__/shortcuts.cpython-37.pyc      |   Bin 0 -> 670 bytes
+ .../django/contrib/sites/admin.py             |     8 +
+ .../django/contrib/sites/apps.py              |    13 +
+ .../sites/locale/af/LC_MESSAGES/django.mo     |   Bin 0 -> 786 bytes
+ .../sites/locale/af/LC_MESSAGES/django.po     |    36 +
+ .../sites/locale/ar/LC_MESSAGES/django.mo     |   Bin 0 -> 947 bytes
+ .../sites/locale/ar/LC_MESSAGES/django.po     |    38 +
+ .../sites/locale/ast/LC_MESSAGES/django.mo    |   Bin 0 -> 774 bytes
+ .../sites/locale/ast/LC_MESSAGES/django.po    |    36 +
+ .../sites/locale/az/LC_MESSAGES/django.mo     |   Bin 0 -> 773 bytes
+ .../sites/locale/az/LC_MESSAGES/django.po     |    3

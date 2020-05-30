@@ -1,0 +1,85 @@
+_opt!" == "true" set OTHER_JAVA_OPTS=!OTHER_JAVA_OPTS!;!var!
++)
++@endlocal & set JVM_MS=%JVM_MS% & set JVM_MX=%JVM_MX% & set JVM_SS=%JVM_SS% & set OTHER_JAVA_OPTS=%OTHER_JAVA_OPTS%
++
++if "%JVM_MS%" == "" (
++  echo minimum heap size not set; configure using -Xms via "%ES_PATH_CONF%/jvm.options.d", or ES_JAVA_OPTS
++  goto:eof
++)
++if "%JVM_MX%" == "" (
++  echo maximum heap size not set; configure using -Xmx via "%ES_PATH_CONF%/jvm.options.d", or ES_JAVA_OPTS
++  goto:eof
++)
++if "%JVM_SS%" == "" (
++  echo thread stack size not set; configure using -Xss via "%ES_PATH_CONF%/jvm.options.d", or ES_JAVA_OPTS
++  goto:eof
++)
++set OTHER_JAVA_OPTS=%OTHER_JAVA_OPTS:"=%
++set OTHER_JAVA_OPTS=%OTHER_JAVA_OPTS:~1%
++
++set ES_PARAMS=-Delasticsearch;-Des.path.home="%ES_HOME%";-Des.path.conf="%ES_PATH_CONF%";-Des.distribution.flavor="%ES_DISTRIBUTION_FLAVOR%";-Des.distribution.type="%ES_DISTRIBUTION_TYPE%";-Des.bundled_jdk="%ES_BUNDLED_JDK%"
++
++if "%ES_START_TYPE%" == "" set ES_START_TYPE=manual
++if "%ES_STOP_TIMEOUT%" == "" set ES_STOP_TIMEOUT=0
++
++if "%SERVICE_DISPLAY_NAME%" == "" set SERVICE_DISPLAY_NAME=Elasticsearch %ES_VERSION% (%SERVICE_ID%)
++if "%SERVICE_DESCRIPTION%" == "" set SERVICE_DESCRIPTION=Elasticsearch %ES_VERSION% Windows Service - https://elastic.co
++
++if not "%SERVICE_USERNAME%" == "" (
++	if not "%SERVICE_PASSWORD%" == "" (
++		set SERVICE_PARAMS=%SERVICE_PARAMS% --ServiceUser "%SERVICE_USERNAME%" --ServicePassword "%SERVICE_PASSWORD%"
++	)
++)
++"%EXECUTABLE%" //IS//%SERVICE_ID% --Startup %ES_START_TYPE% --StopTimeout %ES_STOP_TIMEOUT% --StartClass org.elasticsearch.bootstrap.Elasticsearch --StartMethod main ++StartParams --quiet --StopClass org.elasticsearch.bootstrap.Elasticsearch --StopMethod close --Classpath "%ES_CLASSPATH%" --JvmMs %JVM_MS% --JvmMx %JVM_MX% --JvmSs %JVM_SS% --JvmOptions %OTHER_JAVA_OPTS% ++JvmOptions %ES_PARAMS% %LOG_OPTS% --PidFile "%SERVICE_ID%.pid" --DisplayName "%SERVICE_DISPLAY_NAME%" --Description "%SERVICE_DESCRIPTION%" --Jvm "%JAVA_HOME%%JVM_DLL%" --StartMode jvm --StopMode jvm --StartPath "%ES_HOME%" %SERVICE_PARAMS% ++Environment HOSTNAME="%%COMPUTERNAME%%"
++
++if not errorlevel 1 goto installed
++echo Failed installing '%SERVICE_ID%' service
++exit /B 1
++goto:eof
++
++:installed
++echo The service '%SERVICE_ID%' has been installed.
++goto:eof
++
++:err
++echo JAVA_HOME environment variable must be set!
++pause
++goto:eof
++
++rem ---
++rem Function for converting Xm[s|x] values into MB which Commons Daemon accepts
++rem ---
++:convertxm
++set value=%~1
++rem extract last char (unit)
++set unit=%value:~-1%
++rem assume the unit is specified
++set conv=%value:~0,-1%
++
++if "%unit%" == "k" goto kilo
++if "%unit%" == "K" goto kilo
++if "%unit%" == "m" goto mega
++if "%unit%" == "M" goto mega
++if "%unit%" == "g" goto giga
++if "%unit%" == "G" goto giga
++
++rem no unit found, must be bytes; consider the whole value
++set conv=%value%
++rem convert to KB
++set /a conv=%conv% / 1024
++:kilo
++rem convert to MB
++set /a conv=%conv% / 1024
++goto mega
++:giga
++rem convert to MB
++set /a conv=%conv% * 1024
++:mega
++set "%~2=%conv%"
++goto:eof
++
++:convertxk
++set value=%~1
++rem extract last char (unit)
++set unit=%value:~-1%
++rem assume the unit is specified

@@ -1,0 +1,25 @@
+jango/conf/project_template/project_name/asgi.py-tpl
+ create mode 100644 storage/Lib/site-packages/django/conf/project_template/project_name/settings.py-tpl
+ create mode 100644 storage/Lib/site-packages/django/conf/project_template/project_name/urls.py-tpl
+ create mode 100644 storage/Lib/site-packages/django/conf/project_template/project_name/wsgi.py-tpl
+ create mode 100644 storage/Lib/site-packages/django/conf/urls/__init__.py
+ create mode 100644 storage/Lib/site-packages/django/conf/urls/__pycache__/__init__.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/conf/urls/__pycache__/i18n.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/conf/urls/__pycache__/static.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/conf/urls/i18n.py
+ create mode 100644 storage/Lib/site-packages/django/conf/urls/static.py
+ create mode 100644 storage/Lib/site-packages/django/contrib/__init__.py
+ create mode 100644 storage/Lib/site-packages/django/contrib/__pycache__/__init__.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/__init__.py
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/__pycache__/__init__.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/__pycache__/actions.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/__pycache__/apps.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/__pycache__/checks.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/__pycache__/decorators.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/__pycache__/exceptions.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/__pycache__/filters.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/__pycache__/forms.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/__pycache__/helpers.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/__pycache__/models.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/__pycache__/options.cpython-37.pyc
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/__pycache__/sites.

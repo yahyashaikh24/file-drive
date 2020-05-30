@@ -1,0 +1,24 @@
+ 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/tk.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/tr.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/uk.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/vi.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/zh-CN.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/i18n/zh-TW.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/select2.full.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/select2/select2.full.min.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/xregexp/LICENSE.txt
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/xregexp/xregexp.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/static/admin/js/vendor/xregexp/xregexp.min.js
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/templates/admin/404.html
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/templates/admin/500.html
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/templates/admin/actions.html
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/templates/admin/app_index.html
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/templates/admin/auth/user/add_form.html
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/templates/admin/base.html
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/templates/admin/base_site.html
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/templates/admin/change_form.html
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/templates/admin/change_form_object_tools.html
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/templates/admin/change_list.html
+ create mode 100644 storage/Lib/site-packages/django/contrib/admin/templates/admin/change_list_object_tools.html
+ create mode 100644 storag

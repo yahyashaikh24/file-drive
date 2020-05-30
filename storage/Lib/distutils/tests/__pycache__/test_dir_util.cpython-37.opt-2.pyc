@@ -1,0 +1,75 @@
+locale/br/LC_MESSAGES/django.mo  |   Bin 0 -> 1027 bytes
+ .../sessions/locale/br/LC_MESSAGES/django.po  |    40 +
+ .../sessions/locale/bs/LC_MESSAGES/django.mo  |   Bin 0 -> 759 bytes
+ .../sessions/locale/bs/LC_MESSAGES/django.po  |    37 +
+ .../sessions/locale/ca/LC_MESSAGES/django.mo  |   Bin 0 -> 738 bytes
+ .../sessions/locale/ca/LC_MESSAGES/django.po  |    37 +
+ .../sessions/locale/cs/LC_MESSAGES/django.mo  |   Bin 0 -> 759 bytes
+ .../sessions/locale/cs/LC_MESSAGES/django.po  |    37 +
+ .../sessions/locale/cy/LC_MESSAGES/django.mo  |   Bin 0 -> 774 bytes
+ .../sessions/locale/cy/LC_MESSAGES/django.po  |    37 +
+ .../sessions/locale/da/LC_MESSAGES/django.mo  |   Bin 0 -> 681 bytes
+ .../sessions/locale/da/LC_MESSAGES/django.po  |    36 +
+ .../sessions/locale/de/LC_MESSAGES/django.mo  |   Bin 0 -> 721 bytes
+ .../sessions/locale/de/LC_MESSAGES/django.po  |    35 +
+ .../sessions/locale/dsb/LC_MESSAGES/django.mo |   Bin 0 -> 810 bytes
+ .../sessions/locale/dsb/LC_MESSAGES/django.po |    37 +
+ .../sessions/locale/el/LC_MESSAGES/django.mo  |   Bin 0 -> 809 bytes
+ .../sessions/locale/el/LC_MESSAGES/django.po  |    36 +
+ .../sessions/locale/en/LC_MESSAGES/django.mo  |   Bin 0 -> 356 bytes
+ .../sessions/locale/en/LC_MESSAGES/django.po  |    38 +
+ .../locale/en_AU/LC_MESSAGES/django.mo        |   Bin 0 -> 486 bytes
+ .../locale/en_AU/LC_MESSAGES/django.po        |    35 +
+ .../locale/en_GB/LC_MESSAGES/django.mo        |   Bin 0 -> 707 bytes
+ .../locale/en_GB/LC_MESSAGES/django.po        |    36 +
+ .../sessions/locale/eo/LC_MESSAGES/django.mo  |   Bin 0 -> 727 bytes
+ .../sessions/locale/eo/LC_MESSAGES/django.po  |    37 +
+ .../sessions/locale/es/LC_MESSAGES/django.mo  |   Bin 0 -> 734 bytes
+ .../sessions/locale/es/LC_MESSAGES/django.po  |    37 +
+ .../locale/es_AR/LC_MESSAGES/django.mo        |   Bin 0 -> 694 bytes
+ .../locale/es_AR/LC_MESSAGES/django.po        |    37 +
+ .../locale/es_CO/LC_MESSAGES/django.mo        |   Bin 0 -> 754 bytes
+ .../locale/es_CO/LC_MESSAGES/django.po        |    36 +
+ .../locale/es_MX/LC_MESSAGES/django.mo        |   Bin 0 -> 756 bytes
+ .../locale/es_MX/LC_MESSAGES/django.po        |    37 +
+ .../locale/es_VE/LC_MESSAGES/django.mo        |   Bin 0 -> 486 bytes
+ .../locale/es_VE/LC_MESSAGES/django.po        |    35 +
+ .../sessions/locale/et/LC_MESSAGES/django.mo  |   Bin 0 -> 737 bytes
+ .../sessions/locale/et/LC_MESSAGES/django.po  |    37 +
+ .../sessions/locale/eu/LC_MESSAGES/django.mo  |   Bin 0 -> 728 bytes
+ .../sessions/locale/eu/LC_MESSAGES/django.po  |    36 +
+ .../sessions/locale/fa/LC_MESSAGES/django.mo  |   Bin 0 -> 755 bytes
+ .../sessions/locale/fa/LC_MESSAGES/django.po  |    37 +
+ .../sessions/locale/fi/LC_MESSAGES/django.mo  |   Bin 0 -> 721 bytes
+ .../sessions/locale/fi/LC_MESSAGES/django.po  |    37 +
+ .../sessions/locale/fr/LC_MESSAGES/django.mo  |   Bin 0 -> 692 bytes
+ .../sessions/locale/fr/LC_MESSAGES/django.po  |    36 +
+ .../sessions/locale/fy/LC_MESSAGES/django.mo  |   Bin 0 -> 476 bytes
+ .../sessions/locale/fy/LC_MESSAGES/django.po  |    35 +
+ .../sessions/locale/ga/LC_MESSAGES/django.mo  |   Bin 0 -> 747 bytes
+ .../sessions/locale/ga/LC_MESSAGES/django.po  |    37 +
+ .../sessions/locale/gd/LC_MESSAGES/django.mo  |   Bin 0 -> 791 bytes
+ .../sessions/locale/gd/LC_MESSAGES/django.po  |    37 +
+ .../sessions/locale/gl/LC_MESSAGES/django.mo  |   Bin 0 -> 701 bytes
+ .../sessions/locale/gl/LC_MESSAGES/django.po  |    37 +
+ .../sessions/locale/he/LC_MESSAGES/django.mo  |   Bin 0 -> 809 bytes
+ .../sessions/locale/he/LC_MESSAGES/django.po  |    36 +
+ .../sessions/locale/hi/LC_MESSAGES/django.mo  |   Bin 0 -> 759 bytes
+ .../sessions/locale/hi/LC_MESSAGES/django.po  |    36 +
+ .../sessions/locale/hr/LC_MESSAGES/django.mo  |   Bin 0 -> 819 bytes
+ .../sessions/locale/hr/LC_MESSAGES/django.po  |    38 +
+ .../sessions/locale/hsb/LC_MESSAGES/django.mo |   Bin 0 -> 805 bytes
+ .../sessions/locale/hsb/LC_MESSAGES/django.po |    37 +
+ .../sessions/locale/hu/LC_MESSAGES/django.mo  |   Bin 0 -> 727 bytes
+ .../sessions/locale/hu/LC_MESSAGES/django.po  |    37 +
+ .../sessions/locale/hy/LC_MESSAGES/django.mo  |   Bin 0 -> 815 bytes
+ .../sessions/locale/hy/LC_MESSAGES/django.po  |    35 +
+ .../sessions/locale/ia/LC_MESSAGES/django.mo  |   Bin 0 -> 744 bytes
+ .../sessions/locale/ia/LC_MESSAGES/django.po  |    36 +
+ .../sessions/locale/id/LC_MESSAGES/django.mo  |   Bin 0 -> 705 bytes
+ .../sessions/locale/id/LC_MESSAGES/django.po  |    38 +
+ .../sessions/locale/io/LC_MESSAGES/django.mo  |   Bin 0 -> 683 bytes
+ .../sessions/locale/io/LC_MESSAGES/django.po  |    35 +
+ .../sessions/locale/is/LC_MESSAGES/django.mo  |   Bin 0 -> 706 bytes
+ .../sessions/locale/is/LC_MESSAGES/django.po  |    36 +
+ .../session

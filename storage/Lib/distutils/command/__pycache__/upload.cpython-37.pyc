@@ -1,0 +1,108 @@
+  unless required by applicable law (such as deliberate and grossly
++      negligent acts) or agreed to in writing, shall any Contributor be
++      liable to You for damages, including any direct, indirect, special,
++      incidental, or consequential damages of any character arising as a
++      result of this License or out of the use or inability to use the
++      Work (including but not limited to damages for loss of goodwill,
++      work stoppage, computer failure or malfunction, or any and all
++      other commercial damages or losses), even if such Contributor
++      has been advised of the possibility of such damages.
++
++   9. Accepting Warranty or Additional Liability. While redistributing
++      the Work or Derivative Works thereof, You may choose to offer,
++      and charge a fee for, acceptance of support, warranty, indemnity,
++      or other liability obligations and/or rights consistent with this
++      License. However, in accepting such obligations, You may act only
++      on Your own behalf and on Your sole responsibility, not on behalf
++      of any other Contributor, and only if You agree to indemnify,
++      defend, and hold each Contributor harmless for any liability
++      incurred by, or claims asserted against, such Contributor by reason
++      of your accepting any such warranty or additional liability.
++
++   END OF TERMS AND CONDITIONS
++
++   APPENDIX: How to apply the Apache License to your work.
++
++      To apply the Apache License to your work, attach the following
++      boilerplate notice, with the fields enclosed by brackets "[]"
++      replaced with your own identifying information. (Don't include
++      the brackets!)  The text should be enclosed in the appropriate
++      comment syntax for the file format. We also recommend that a
++      file or class name and description of purpose be included on the
++      same "printed page" as the copyright notice for easier
++      identification within third-party archives.
++
++   Copyright [yyyy] [name of copyright owner]
++
++   Licensed under the Apache License, Version 2.0 (the "License");
++   you may not use this file except in compliance with the License.
++   You may obtain a copy of the License at
++
++       http://www.apache.org/licenses/LICENSE-2.0
++
++   Unless required by applicable law or agreed to in writing, software
++   distributed under the License is distributed on an "AS IS" BASIS,
++   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++   See the License for the specific language governing permissions and
++   limitations under the License.
++
++
+diff --git a/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/README.asciidoc b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/README.asciidoc
+new file mode 100644
+index 0000000000000000000000000000000000000000..73bdba5a359fc79304070d056bd247ebd61544a0
+--- /dev/null
++++ b/file_drive-master/content/assets/elasticsearch-7.7.0/elasticsearch-7.7.0/README.asciidoc
+@@ -0,0 +1,209 @@
++= Elasticsearch
++
++== A Distributed RESTful Search Engine
++
++=== https://www.elastic.co/products/elasticsearch[https://www.elastic.co/products/elasticsearch]
++
++Elasticsearch is a distributed RESTful search engine built for the cloud. Features include:
++
++* Distributed and Highly Available Search Engine.
++** Each index is fully sharded with a configurable number of shards.
++** Each shard can have one or more replicas.
++** Read / Search operations performed on any of the replica shards.
++* Multi Tenant.
++** Support for more than one index.
++** Index level configuration (number of shards, index storage, ...).
++* Various set of APIs
++** HTTP RESTful API
++** All APIs perform automatic node operation rerouting.
++* Document oriented
++** No need for upfront schema definition.
++** Schema can be defined for customization of the indexing process.
++* Reliable, Asynchronous Write Behind for long term persistency.
++* (Near) Real Time Search.
++* Built on top of Apache Lucene
++** Each shard is a fully functional Lucene index
++** All the power of Lucene easily exposed through simple configuration / plugins.
++* Per operation consistency
++** Single document level operations are atomic, consistent, isolated and durable.
++
++== Getting Started
++
++First of all, DON'T PANIC. It will take 5 minutes to get the gist of what Elasticsearch is all about.
++
++=== Installation
++
++* https://www.elastic.co/downloads/elasticsearch[Download] and unpack the Elasticsearch official distribution.
++* Run `bin/elasticsearch` on Linux or macOS. Run `bin\elasticsearch.bat` on Windows.
++* Run `curl -X GET http://localhost:9200/`.
++* Start more servers ...
++
++=== Indexing
++
++Let's try and index some twitter like information. First, let's index some tweets (the `twitter` index will be created automatically):
++
++----
++curl -XPUT 'http://localhost:9200/twitter/_doc/1?pretty' -H 'Content-Type: application/json' -d '
++{
++    "user": "kimchy",
++    "post_date": "2009-11-15T13:12:00",
++    "message": "Trying out Elasticsearch, so far so good?"
++}'
++
++curl -XPUT 'http://localhost:9200/twitter/_doc/2?prett

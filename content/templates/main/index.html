@@ -1,0 +1,49 @@
+{% extends 'layouts/default/page.html' %}
+
+{% include files %}
+{% load i18n %}
+{% block content %}
+{% csrf_token %}
+        <!-- <br>
+        <br> -->
+        
+        {% if request.user.is_authenticated %}
+            <div id="frame_div" style="display: block;">
+                    
+            </div>
+            <div class="grid_main">
+                    <button id="user_btn" onclick="show_user()" style="display: block;float: left;">{{ request.user.first_name }}</button>
+                    <button style="display: block;float: right;">
+                            <a href="{% url 'filesystem:files' %}">{% trans 'Files' %}</a>
+                    </button>
+                    {% endif %}
+            
+        <div id="user_info">
+            {% if request.user.is_authenticated %}
+            
+            {% trans 'Your username is' %} <b>{{ request.user.username }}</b>.<br><br>
+                    <li class="nav-item">{{ request.user.first_name }}&nbsp;{{ request.user.last_name }}
+                        <a class="nav-link" href="{% url 'accounts:change_profile' %}">{% trans 'Change profile' %}</a>
+                    </li><br>
+                    <li class="nav-item">({{ request.user.email }})
+                        <a class="nav-link" href="{% url 'accounts:change_email' %}">{% trans 'Change email' %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'accounts:change_password' %}">{% trans 'Change password' %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'accounts:log_out' %}">{% trans 'Log out' %}</a>
+                    </li>
+            </div>
+        </div>
+            <!-- <b>{{ request.filesystem_filesupload.file_field}}</b>. -->
+        {% else %}
+
+            {% trans 'You are a guest.' %}
+
+        {% endif %}
+<br><br>
+{% block footer %}
+{% include "filesystem/footer.html" %}
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,130 @@
+#dialogoverlay{
+	display: none;
+	opacity: .8;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: rgb(70, 69, 69);
+	width: 100%;
+	z-index: 10;
+	border-radius: 2px;
+}
+#dialogbox{
+	display: none;
+	position: fixed;
+	background: rgb(70, 69, 69);
+	border-radius:7px; 
+	width:550px;
+	z-index: 10;
+}
+#dialogbox > div{ background:#FFF; margin:8px; }
+#dialogbox > div > #dialogboxhead{ background: rgb(255, 255, 255); font-size:19px; padding:10px; color:#CCC; }
+#dialogbox > div > #dialogboxbody{ background: rgb(255, 255, 255); padding:20px; color:rgb(0, 0, 0); text-align:center; }
+#dialogbox > div > #dialogboxfoot{ background: rgb(255, 255, 255); padding:10px; text-align:right; }
+
+#prompt_value1{
+    border: none;
+	border-bottom: 2px solid rgb(0, 0, 0);
+	background: rgb(223, 223, 223);
+	width: 100%;
+}
+
+#okbtn{
+	border: none;
+	border-radius: 3px;
+	background-color: rgb(243, 70, 70);
+	padding: 8px 16px;
+	text-align: center;
+	margin: 4px 2px;
+	transition: 0.3s;
+	opacity: 1;
+}
+#okbtn:hover{
+	opacity: 0.8;
+}
+#cancelbtn{
+	border: none;
+	border-radius: 3px;
+	padding: 8px 16px;
+	text-align: center;
+	margin: 4px 2px;
+}
+#cancelbtn:hover{
+	background-color: #CCC;
+}
+
+/* The Modal (background) */
+.modal {
+	width: 30%;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+	display: none; /* Hidden by default */
+	position: absolute;
+	left: 70%;
+	top:22%;
+	height: 400px;
+	z-index: 1; /* Sit on top */
+	/* left: 0;
+	top: 0; */
+	overflow: auto; /* Enable scroll if needed */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+	from {top:-300px; opacity:0} 
+	to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+	from {top:-300px; opacity:0}
+	to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+	color: rgb(133, 133, 133);
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  
+  /* .modal-header {
+	padding: 2px 16px;
+	background-color: #868686;
+	color: white;
+	text-align: left;
+  } */
+  
+  .modal-body {
+	  padding: 2px 16px;
+	  text-align: center;
+	}
+  
+  /* .modal-footer {
+	padding: 2px 16px;
+	background-color: #5cb85c;
+	color: white;
+  } */

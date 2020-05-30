@@ -1,0 +1,19 @@
+{% extends 'layouts/default/page.html' %}
+
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+<style>
+        .navbar {
+          display: none;
+        }
+</style>
+    <form method="post" enctype="multipart/form-data">
+
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button class="btn-primary" type="submit">{% trans 'Upload' %}</button>
+
+    </form>
+{% endblock %}

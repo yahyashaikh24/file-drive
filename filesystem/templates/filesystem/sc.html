@@ -1,0 +1,7 @@
+{% extends 'layouts/default/page.html' %}
+{% load static %}
+{% block content %}
+{% csrf_token %}
+<button name="Hello Test SC" onclick="rename_file()" >Yahya</button>
+<input type="text"  value=file_name />
+{% endblock %}

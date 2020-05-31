@@ -55,7 +55,7 @@
                       {% endfor %}
                     </div>
                     <div class="boxes">
-                      <div id="u_details" class="user">
+                      <div id="u_details container" class="user">
                         
                       </div>
                       <div id="grid_con" >
@@ -78,36 +78,49 @@
                           </script>
                         </div>
                       </div>
-                      <div id="f_details" class="det">
+                      <div id="f_details" class="det mt-3">
                         <!-- filename -->
                       </div>
                     </div> 
 
-                    <div id="myModal" class="modal">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          {% trans 'Your username is' %} <b> {{ request.user.username }}</b>.<br><br>
-                          <span class="close">&times;</span>
-                        </div>
-                        <div class="modal-body">
-                            <li class="nav-item">{{ request.user.first_name }}&nbsp;{{ request.user.last_name }}
-                                <a class="nav-link" href="{% url 'accounts:change_profile' %}">{% trans 'Change profile' %}</a>
-                            </li><br>
-                            <li class="nav-item">({{ request.user.email }})
-                                <a class="nav-link" href="{% url 'accounts:change_email' %}">{% trans 'Change email' %}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'accounts:change_password' %}">{% trans 'Change password' %}</a>
-                            </li>
-                            <li class="nav-item">   
-                              <a class="nav-link" href="{% url 'accounts:log_out' %}" style="color: black;"><b>{% trans 'Log out' %}</b></a>
-                            </li>
-                        </div>
-                        <!-- <div class="modal-footer">
-
-                        </div> -->
-                      </div>
-                    </div>
+                    
+                    <!-- The Modal -->
+  <div class="modal" id="myModal">
+      <div class="modal-dialog modal-dialog-scrollable modal-sm">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <p class="modal-title">{% trans 'Your username is' %} <b> {{ request.user.username }}</b>.<br><br></p>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <ul class="list-group">
+              <li class="list-group-item">{{ request.user.first_name }}&nbsp;{{ request.user.last_name }}
+                  <a class="nav-link" href="{% url 'accounts:change_profile' %}">{% trans 'Change profile' %}</a>
+              </li><br>
+              <li class="list-group-item">({{ request.user.email }})
+                  <a class="nav-link" href="{% url 'accounts:change_email' %}">{% trans 'Change email' %}</a>
+              </li>
+              <li class="list-group-item">
+                  <a class="nav-link" href="{% url 'accounts:change_password' %}">{% trans 'Change password' %}</a>
+              </li>
+              <li class="list-group-item">   
+                <a class="active" href="{% url 'accounts:log_out' %}"><b>{% trans 'Log out' %}</b></a>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Modal footer -->
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div> -->
+          
+        </div>
+      </div>
+    </div>
 {% else %}
 
             {% trans 'You are a guest.' %}

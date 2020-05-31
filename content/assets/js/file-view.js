@@ -142,7 +142,7 @@ var grid = function(e) {
   var file_detail = function(){
     var ret = num.split("-");
     var det = document.getElementById('f_details');
-    det.innerHTML = '<div><img src="'+thumbnail_img[ret[0]]+'" alt="thumb" width="200px" height="200px"/><br><br>Filename:  '+file_name[ret[0]]+'</div>';
+    det.innerHTML = '<div><img src="'+thumbnail_img[ret[0]]+'" alt="thumb" class="img-thumbnail" width="200px" height="200px"/><br><br>Filename:  '+file_name[ret[0]]+'</div>';
   }
 
   var items = [
@@ -165,8 +165,8 @@ document.addEventListener('DOMContentLoaded', function() {
     chld.id = i+'-a';
     chld.className = i+"-container";
     chld.addEventListener('contextmenu',grid);
-    var name = file_name[i].substr(0,9);
-    chld.innerHTML = '<div class="name">'+name+"....."+'</div><img src="'+thumbnail_img[i]+'" alt="thumb" width="200px" height="200px"/><br>';
+    // var name = file_name[i].substr(0,9);
+    chld.innerHTML = '<div class="name">'+file_name[i]+'</div><img src="'+thumbnail_img[i]+'" alt="thumb" width="200px" height="200px" /><br>';
     document.querySelector('div.grid-container').appendChild(chld);
     chld.style.boxShadow = "5px 5px 5px 5px rgb(197, 197, 197)";
     chld.style.textAlign = "center";
@@ -252,3 +252,11 @@ function show_user() {
     }
   }
 }
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".grid-container div").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});

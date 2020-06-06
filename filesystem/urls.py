@@ -1,12 +1,12 @@
 from django.urls import path,include,re_path
 from django.conf.urls.static import static
 from django.conf import settings
-from .views import FileFieldView,showfiles, rename_filename,delete_filename, search_filename
+from .views import rename_filename,delete_filename, search_filename
 
 app_name = 'filesystem'
 
 urlpatterns = [
-    path('files/',FileFieldView.as_view(), name='index'),
+    # path('files/',FileFieldView.as_view(), name='index'),
     path(r'search/', search_filename, name='search'),
 
     # path('',showfiles, name='index'),

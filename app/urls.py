@@ -9,6 +9,7 @@ from main.views import IndexPageView, ChangeLanguageView
 urlpatterns = [
     path('admin/', admin.site.urls),
 
+    # path('',model_form_upload, name='index'),
     path('', showfiles, name='index'),
 
     path('i18n/', include('django.conf.urls.i18n')),

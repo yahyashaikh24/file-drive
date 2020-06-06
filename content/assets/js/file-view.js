@@ -260,3 +260,13 @@ $(document).ready(function(){
     });
   });
 });
+
+$(document).ready(function(){
+  // Show modal on page load
+  $("#compose").modal('show');
+
+  // Hide modal on button click
+  $(".hide-modal").click(function(){
+      $("#compose").modal('hide');
+  });
+});

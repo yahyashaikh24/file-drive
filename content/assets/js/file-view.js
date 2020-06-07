@@ -118,7 +118,21 @@ var grid = function(e) {
     }
 
   var rename_f = function(){
-    Prompt.render('Rename','rename_file_js');
+    var ret = num.split("-");
+    var rename_button = document.getElementById('rename_button');
+    rename_button.click();
+    var ext_val = document.getElementById('extension');
+    var input_val = document.getElementById('file-name');
+    var file_re = file_name[ret[0]].split(".");
+    if(file_re.length === 1){
+      exi_val = file_re
+      ext_val.innerText = "file";
+    }else{
+      var ext_input = file_re.pop();
+      exi_val = file_re.toString().replace(",",".")
+      ext_val.innerText = "."+ext_input;
+    }
+    input_val.value = exi_val;
   }
   var delete_f = function(){
     var ret = num.split("-");
@@ -195,10 +209,18 @@ var rename_file_js = function (val){
 }
 
 function rename_funct(ret,_val) {
+  var ext = file_name[ret[0]].split(".");
+  console.log(ext);
+  if(typeof  ext[1] === 'undefined'){
+    new_val = _val;
+  }
+  else{
+    new_val = _val+"."+ext[1]
+  };
   var test_div = {
     file_location: file_path[ret[0]],
     file_old: file_name[ret[0]],
-    file_new: _val,
+    file_new: new_val,
   };
   // var text = "YAHYA SHAIKH"
   $.ajax({
@@ -217,7 +239,7 @@ var rename_suc = function(_res){
   var child  = div_id.firstChild;
   res = _res.split(",");
   child.innerHTML = res[0];
-  location.reload()
+  // location.reload()
   // Change dialog box tympanus.net/codrops/
 }
 
@@ -239,19 +261,7 @@ var myFunction = function(){
   }
 }
 
-function show_user() {
-  var modal = document.getElementById("myModal");
-  modal.style.display = "block";
-  var span = document.getElementsByClassName("close")[0];
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";      
-    }
-  }
-}
+
 $(document).ready(function(){
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
@@ -262,11 +272,11 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  // Show modal on page load
-  $("#compose").modal('show');
 
-  // Hide modal on button click
-  $(".hide-modal").click(function(){
-      $("#compose").modal('hide');
-  });
+  $('#rename_model').on('click','#submit', function (e) {
+    var rename_val = $('#file-name').val();
+    rename_file_js(rename_val)
 });
+})
+
+document.getElementById("rename_button").style.display = "none";
